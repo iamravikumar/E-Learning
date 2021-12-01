@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="90af4aca1a8241379c0b1c3b26447d6b" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Admin" Width="1.5" PointX="3" PointY="21.5" />
+        <EntityTypeShape EntityType="Model.Admin_Feedback" Width="1.5" PointX="5.25" PointY="21.875" />
+        <EntityTypeShape EntityType="Model.Branch" Width="1.5" PointX="0.75" PointY="5.625" />
+        <EntityTypeShape EntityType="Model.Content_Type" Width="1.5" PointX="9.75" PointY="5.375" />
+        <EntityTypeShape EntityType="Model.Course" Width="1.5" PointX="8.25" PointY="8.375" />
+        <EntityTypeShape EntityType="Model.Course_Chapter" Width="1.5" PointX="9.75" PointY="1.125" />
+        <EntityTypeShape EntityType="Model.Course_Chapter_Content" Width="1.5" PointX="12" PointY="1" />
+        <EntityTypeShape EntityType="Model.Department" Width="1.5" PointX="1.5" PointY="2.75" />
+        <EntityTypeShape EntityType="Model.Enrollment" Width="1.5" PointX="5.25" PointY="2.875" />
+        <EntityTypeShape EntityType="Model.Feedback" Width="1.5" PointX="7.5" PointY="4.375" />
+        <EntityTypeShape EntityType="Model.Language" Width="1.5" PointX="6" PointY="18.875" />
+        <EntityTypeShape EntityType="Model.Learning_Progress" Width="1.5" PointX="7.5" PointY="1.375" />
+        <EntityTypeShape EntityType="Model.Roll" Width="1.5" PointX="0.75" PointY="8.625" />
+        <EntityTypeShape EntityType="Model.Student" Width="1.5" PointX="3" PointY="8" />
+        <EntityTypeShape EntityType="Model.Student_Email" Width="1.5" PointX="5.25" PointY="12.625" />
+        <EntityTypeShape EntityType="Model.sysdiagram" Width="1.5" PointX="10.75" PointY="8.75" />
+        <EntityTypeShape EntityType="Model.Teacher" Width="1.5" PointX="6" PointY="8" />
+        <EntityTypeShape EntityType="Model.Teacher_Email" Width="1.5" PointX="5.25" PointY="15.75" />
+        <EntityTypeShape EntityType="Model.Teacher_Student_Email" Width="1.5" PointX="7.5" PointY="12.75" />
+        <AssociationConnector Association="Model.FK_Admin_Feedback_Admin" />
+        <AssociationConnector Association="Model.FK_Admin_Roll" />
+        <AssociationConnector Association="Model.FK_Admin_Feedback_Feedback" />
+        <AssociationConnector Association="Model.FK_Branch_Department" />
+        <AssociationConnector Association="Model.FK_Student_Branch" />
+        <AssociationConnector Association="Model.FK_Course_Chapter_Content_Content_Type" />
+        <AssociationConnector Association="Model.FK_Course_Language" />
+        <AssociationConnector Association="Model.FK_Course_Teacher" />
+        <AssociationConnector Association="Model.FK_Course_Chapter_Content_Course_Chapter" />
+        <AssociationConnector Association="Model.FK_Teacher_Department" />
+        <AssociationConnector Association="Model.FK_Enrollment_Student" />
+        <AssociationConnector Association="Model.FK_Feedback_Enrollment" />
+        <AssociationConnector Association="Model.FK_Learning_Progress_Enrollment" />
+        <AssociationConnector Association="Model.FK_Student_Roll" />
+        <AssociationConnector Association="Model.FK_Teacher_Roll" />
+        <AssociationConnector Association="Model.FK_Student_Email_Student" />
+        <AssociationConnector Association="Model.FK_Teacher_Student_Email_Student_Email" />
+        <AssociationConnector Association="Model.FK_Teacher_Student_Email_Teacher_Email" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
