@@ -49,7 +49,7 @@ namespace E_Learning
 			this.label8 = new System.Windows.Forms.Label();
 			this.AddCoursesComboBox = new System.Windows.Forms.ComboBox();
 			this.AddContentComboBox = new System.Windows.Forms.ComboBox();
-			this.lblLinkTest = new System.Windows.Forms.Label();
+			this.lblContentLink = new System.Windows.Forms.Label();
 			this.label10 = new System.Windows.Forms.Label();
 			this.label11 = new System.Windows.Forms.Label();
 			this.label12 = new System.Windows.Forms.Label();
@@ -57,6 +57,8 @@ namespace E_Learning
 			this.typeComboBox = new System.Windows.Forms.ComboBox();
 			this.label13 = new System.Windows.Forms.Label();
 			this.btnUpload = new System.Windows.Forms.Button();
+			this.btnBack = new System.Windows.Forms.Button();
+			this.btnExit = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.contentsGRV)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -126,6 +128,7 @@ namespace E_Learning
 			this.btnAdd.TabIndex = 6;
 			this.btnAdd.Text = "Add Content";
 			this.btnAdd.UseVisualStyleBackColor = true;
+			this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
 			// 
 			// btnUpdate
 			// 
@@ -135,6 +138,7 @@ namespace E_Learning
 			this.btnUpdate.TabIndex = 7;
 			this.btnUpdate.Text = "Update Content";
 			this.btnUpdate.UseVisualStyleBackColor = true;
+			this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
 			// 
 			// btnDelete
 			// 
@@ -144,6 +148,7 @@ namespace E_Learning
 			this.btnDelete.TabIndex = 8;
 			this.btnDelete.Text = "Delete Content";
 			this.btnDelete.UseVisualStyleBackColor = true;
+			this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
 			// 
 			// lblMessage
 			// 
@@ -172,6 +177,7 @@ namespace E_Learning
 			this.btnAddChapter.TabIndex = 11;
 			this.btnAddChapter.Text = "Add Chapter";
 			this.btnAddChapter.UseVisualStyleBackColor = true;
+			this.btnAddChapter.Click += new System.EventHandler(this.btnAddChapter_Click);
 			// 
 			// txtAssighnmentsNo
 			// 
@@ -241,14 +247,14 @@ namespace E_Learning
 			this.AddContentComboBox.Size = new System.Drawing.Size(223, 23);
 			this.AddContentComboBox.TabIndex = 26;
 			// 
-			// lblLinkTest
+			// lblContentLink
 			// 
-			this.lblLinkTest.AutoSize = true;
-			this.lblLinkTest.Location = new System.Drawing.Point(15, 613);
-			this.lblLinkTest.Name = "lblLinkTest";
-			this.lblLinkTest.Size = new System.Drawing.Size(55, 15);
-			this.lblLinkTest.TabIndex = 25;
-			this.lblLinkTest.Text = "FilePath: ";
+			this.lblContentLink.AutoSize = true;
+			this.lblContentLink.Location = new System.Drawing.Point(15, 613);
+			this.lblContentLink.Name = "lblContentLink";
+			this.lblContentLink.Size = new System.Drawing.Size(55, 15);
+			this.lblContentLink.TabIndex = 25;
+			this.lblContentLink.Text = "FilePath: ";
 			// 
 			// label10
 			// 
@@ -312,16 +318,38 @@ namespace E_Learning
 			this.btnUpload.UseVisualStyleBackColor = true;
 			this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
 			// 
+			// btnBack
+			// 
+			this.btnBack.Location = new System.Drawing.Point(15, 715);
+			this.btnBack.Name = "btnBack";
+			this.btnBack.Size = new System.Drawing.Size(139, 36);
+			this.btnBack.TabIndex = 30;
+			this.btnBack.Text = "Back To Dashbaord";
+			this.btnBack.UseVisualStyleBackColor = true;
+			this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+			// 
+			// btnExit
+			// 
+			this.btnExit.Location = new System.Drawing.Point(205, 715);
+			this.btnExit.Name = "btnExit";
+			this.btnExit.Size = new System.Drawing.Size(139, 36);
+			this.btnExit.TabIndex = 31;
+			this.btnExit.Text = "Quit ";
+			this.btnExit.UseVisualStyleBackColor = true;
+			this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+			// 
 			// TeacherManageCourseContents
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(780, 681);
+			this.ClientSize = new System.Drawing.Size(780, 779);
+			this.Controls.Add(this.btnExit);
+			this.Controls.Add(this.btnBack);
 			this.Controls.Add(this.btnUpload);
 			this.Controls.Add(this.typeComboBox);
 			this.Controls.Add(this.label13);
 			this.Controls.Add(this.AddContentComboBox);
-			this.Controls.Add(this.lblLinkTest);
+			this.Controls.Add(this.lblContentLink);
 			this.Controls.Add(this.label10);
 			this.Controls.Add(this.label11);
 			this.Controls.Add(this.label12);
@@ -377,7 +405,7 @@ namespace E_Learning
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.ComboBox AddCoursesComboBox;
 		private System.Windows.Forms.ComboBox AddContentComboBox;
-		private System.Windows.Forms.Label lblLinkTest;
+		private System.Windows.Forms.Label lblContentLink;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.Label label11;
 		private System.Windows.Forms.Label label12;
@@ -385,5 +413,7 @@ namespace E_Learning
 		private System.Windows.Forms.ComboBox typeComboBox;
 		private System.Windows.Forms.Label label13;
 		private System.Windows.Forms.Button btnUpload;
+		private System.Windows.Forms.Button btnBack;
+		private System.Windows.Forms.Button btnExit;
 	}
 }
