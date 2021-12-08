@@ -59,6 +59,7 @@ namespace E_Learning
 			this.btnUpload = new System.Windows.Forms.Button();
 			this.btnBack = new System.Windows.Forms.Button();
 			this.btnExit = new System.Windows.Forms.Button();
+			this.btnDeleteChapter = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.contentsGRV)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -237,7 +238,6 @@ namespace E_Learning
 			this.AddCoursesComboBox.Name = "AddCoursesComboBox";
 			this.AddCoursesComboBox.Size = new System.Drawing.Size(223, 23);
 			this.AddCoursesComboBox.TabIndex = 19;
-			this.AddCoursesComboBox.SelectedIndexChanged += new System.EventHandler(this.AddCoursesComboBox_SelectedIndexChanged);
 			// 
 			// AddContentComboBox
 			// 
@@ -338,11 +338,22 @@ namespace E_Learning
 			this.btnExit.UseVisualStyleBackColor = true;
 			this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
 			// 
+			// btnDeleteChapter
+			// 
+			this.btnDeleteChapter.Location = new System.Drawing.Point(331, 349);
+			this.btnDeleteChapter.Name = "btnDeleteChapter";
+			this.btnDeleteChapter.Size = new System.Drawing.Size(128, 34);
+			this.btnDeleteChapter.TabIndex = 32;
+			this.btnDeleteChapter.Text = "Delete Chapter";
+			this.btnDeleteChapter.UseVisualStyleBackColor = true;
+			this.btnDeleteChapter.Click += new System.EventHandler(this.btnDeleteChapter_Click);
+			// 
 			// TeacherManageCourseContents
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(780, 779);
+			this.Controls.Add(this.btnDeleteChapter);
 			this.Controls.Add(this.btnExit);
 			this.Controls.Add(this.btnBack);
 			this.Controls.Add(this.btnUpload);
@@ -415,5 +426,6 @@ namespace E_Learning
 		private System.Windows.Forms.Button btnUpload;
 		private System.Windows.Forms.Button btnBack;
 		private System.Windows.Forms.Button btnExit;
+		private System.Windows.Forms.Button btnDeleteChapter;
 	}
 }
