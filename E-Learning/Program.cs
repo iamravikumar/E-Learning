@@ -17,7 +17,7 @@ namespace E_Learning
 			Application.SetHighDpiMode(HighDpiMode.SystemAware);
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new TeacherManageCourseContents());
+			Application.Run(new TeacherEmailFacility());
 		}
 	}
 }

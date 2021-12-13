@@ -83,5 +83,11 @@ namespace E_Learning
 			TeacherManageCourseContents frm = new TeacherManageCourseContents();
 			frm.Show();
 		}
+
+		private void btnStudentReport_Click(object sender, EventArgs e)
+		{
+			TeacherEmailFacility frm = new TeacherEmailFacility();
+			frm.Show();
+		}
 	}
 }

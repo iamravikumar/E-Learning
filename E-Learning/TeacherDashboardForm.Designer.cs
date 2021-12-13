@@ -127,8 +127,9 @@ namespace E_Learning
 			this.btnStudentReport.Name = "btnStudentReport";
 			this.btnStudentReport.Size = new System.Drawing.Size(155, 53);
 			this.btnStudentReport.TabIndex = 9;
-			this.btnStudentReport.Text = "Student Report";
+			this.btnStudentReport.Text = "Email Facility";
 			this.btnStudentReport.UseVisualStyleBackColor = true;
+			this.btnStudentReport.Click += new System.EventHandler(this.btnStudentReport_Click);
 			// 
 			// TeacherDashboardForm
 			// 
