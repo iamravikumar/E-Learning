@@ -38,6 +38,7 @@ namespace E_Learning
 					fName = student.first_name;
 					lName = student.last_name;
 					id = student.id;
+					Global.userId = id;
 					break;
 				}
 			}
@@ -76,6 +77,29 @@ namespace E_Learning
 			{
 				MessageBox.Show("Invalid Old Password");
 			}
+		}
+
+		private void btnViewCourses_Click(object sender, EventArgs e)
+		{
+			StudentViewCoursesForm frm = new StudentViewCoursesForm();
+			frm.Show();
+		}
+
+		private void btnEmail_Click(object sender, EventArgs e)
+		{
+			StudentEmailForm frm = new StudentEmailForm();
+			frm.Show();
+		}
+
+		private void btnFeedback_Click(object sender, EventArgs e)
+		{
+			StudentFeedbackFrom frm = new StudentFeedbackFrom();
+			frm.Show();
+		}
+
+		private void btnClose_Click(object sender, EventArgs e)
+		{
+			this.Close();
 		}
 	}
 }

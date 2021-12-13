@@ -29,6 +29,12 @@ namespace E_Learning.Business
 			return courses;
 		}
 
+		public List<Course> GetTeachersByCourseId(int id)
+		{
+			List<Course> courses = context.Courses.Where(p => p.id == id).ToList();
+			return courses;
+		}
+
 		public void Add(Course course)
 		{
 			try

@@ -19,10 +19,8 @@
         <EntityTypeShape EntityType="Model.Learning_Progress" Width="1.5" PointX="7.5" PointY="1.375" />
         <EntityTypeShape EntityType="Model.Roll" Width="1.5" PointX="0.75" PointY="8.625" />
         <EntityTypeShape EntityType="Model.Student" Width="1.5" PointX="3" PointY="8" />
-        <EntityTypeShape EntityType="Model.Student_Email" Width="1.5" PointX="5.25" PointY="12.625" />
         <EntityTypeShape EntityType="Model.sysdiagram" Width="1.5" PointX="10.75" PointY="8.75" />
         <EntityTypeShape EntityType="Model.Teacher" Width="1.5" PointX="6" PointY="8" />
-        <EntityTypeShape EntityType="Model.Teacher_Email" Width="1.5" PointX="5.25" PointY="15.75" />
         <EntityTypeShape EntityType="Model.Teacher_Student_Email" Width="1.5" PointX="7.5" PointY="12.75" />
         <AssociationConnector Association="Model.FK_Admin_Feedback_Admin" />
         <AssociationConnector Association="Model.FK_Admin_Roll" />
@@ -39,9 +37,14 @@
         <AssociationConnector Association="Model.FK_Learning_Progress_Enrollment" />
         <AssociationConnector Association="Model.FK_Student_Roll" />
         <AssociationConnector Association="Model.FK_Teacher_Roll" />
+        <EntityTypeShape EntityType="Model.Student_Email" Width="1.5" PointX="5.375" PointY="13.375" />
+        <EntityTypeShape EntityType="Model.Teacher_Email" Width="1.5" PointX="5.375" PointY="0.5" />
         <AssociationConnector Association="Model.FK_Student_Email_Student" />
         <AssociationConnector Association="Model.FK_Teacher_Student_Email_Student_Email" />
         <AssociationConnector Association="Model.FK_Teacher_Student_Email_Teacher_Email" />
+        <EntityTypeShape EntityType="Model.Student_Feedback" Width="1.5" PointX="12.75" PointY="6" />
+        <AssociationConnector Association="Model.FK_Student_Feedback_Feedback" />
+        <AssociationConnector Association="Model.FK_Student_Feedback_Student" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

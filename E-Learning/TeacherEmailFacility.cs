@@ -10,6 +10,7 @@ using E_Learning.Business;
 
 namespace E_Learning
 {
+
 	public partial class TeacherEmailFacility : Form
 	{
 		public Teacher teacher;
@@ -19,7 +20,7 @@ namespace E_Learning
 		public TeacherStudentEmailRepository tsEmailRepo;
 		public StudentEmailRepository studentEmailRepo;
 		public static int teacherId;
-
+		List<int> studentsIds;
 		public TeacherEmailFacility()
 		{
 			InitializeComponent();
@@ -27,8 +28,9 @@ namespace E_Learning
 
 		private void TeacherEmailFacility_Load(object sender, EventArgs e)
 		{
-			//teacherId = Global.userId;
-			teacherId = 17;
+			lblMessage.Text = null;
+			teacherId = Global.userId;
+			//teacherId = 17;
 			teacherRepo = new TeacherRepository();
 			teacher = teacherRepo.GetTeacherById(teacherId);
 			studentRepo = new StudentRepository();
@@ -40,7 +42,7 @@ namespace E_Learning
 			CourseRepository courseRepo = new CourseRepository();
 			List<Course> courses = courseRepo.GetCourseByTeacher(teacherId);
 			// 2- Populate Students Assigned To This Teacher
-			List<int> studentsIds = new List<int>();
+			studentsIds = new List<int>();
 			EnrollmentRepository enrolRepo = new EnrollmentRepository();
 			List<Enrollment> enrolments = new List<Enrollment>();
 			studentsIds.Clear();
@@ -72,12 +74,26 @@ namespace E_Learning
 			Teacher_Email email = new Teacher_Email();
 			email.teacher_id = teacherId;
 			Teacher_Student_Email tsEmail = new Teacher_Student_Email();
+			Student_Email stuEmail = new Student_Email();
 			tsEmail.teacher_email_id = email.id;
-			
+			//Get the email details
+			email.text = txtContent.Text;
+			email.title = txtTitle.Text;
+			email.send_date = DateTime.Now;
+			teacherEmailRepo.Add(email);
+
 			if (allStudentCheckBox.Checked)
 			{
 				// Send Email To All Student In The Combo Box
-
+				foreach (var item in studentsIds)
+				{
+					stuEmail.student_id = item;
+					studentEmailRepo.Add(stuEmail);
+					tsEmail.teacher_email_id = email.id;
+					tsEmail.student_email_id = stuEmail.id;
+					tsEmailRepo.Add(tsEmail);
+				}
+				lblMessage.Text = "Email Was Sent Successfully";
 			}
 			else
 			{
@@ -86,6 +102,12 @@ namespace E_Learning
 				{
 					int index = studentsComboBox.SelectedItem.ToString().IndexOf(",");
 					int studentId = Convert.ToInt32(studentsComboBox.SelectedItem.ToString().Substring(0, index));
+					stuEmail.student_id = studentId;
+					studentEmailRepo.Add(stuEmail);
+					tsEmail.teacher_email_id = email.id;
+					tsEmail.student_email_id = stuEmail.id;
+					tsEmailRepo.Add(tsEmail);
+					lblMessage.Text = "Email Was Sent Successfully";
 				}
 			}
 		}

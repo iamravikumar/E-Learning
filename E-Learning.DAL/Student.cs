@@ -19,6 +19,7 @@ namespace E_Learning.DAL
         {
             this.Enrollments = new HashSet<Enrollment>();
             this.Student_Email = new HashSet<Student_Email>();
+            this.Student_Feedback = new HashSet<Student_Feedback>();
         }
     
         public int id { get; set; }
@@ -36,5 +37,7 @@ namespace E_Learning.DAL
         public virtual Roll Roll { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Student_Email> Student_Email { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Student_Feedback> Student_Feedback { get; set; }
     }
 }

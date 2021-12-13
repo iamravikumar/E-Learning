@@ -120,6 +120,9 @@
     <Compile Include="Student_Email.cs">
       <DependentUpon>E-LearningModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Student_Feedback.cs">
+      <DependentUpon>E-LearningModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagram.cs">
       <DependentUpon>E-LearningModel.tt</DependentUpon>
     </Compile>

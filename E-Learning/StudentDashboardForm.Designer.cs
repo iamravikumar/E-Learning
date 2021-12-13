@@ -36,6 +36,11 @@ namespace E_Learning
 			this.textBoxOldPwd = new System.Windows.Forms.TextBox();
 			this.textBoxNewPwd = new System.Windows.Forms.TextBox();
 			this.lblCurrentUser = new System.Windows.Forms.Label();
+			this.btnViewCourses = new System.Windows.Forms.Button();
+			this.btnEmail = new System.Windows.Forms.Button();
+			this.btnFeedback = new System.Windows.Forms.Button();
+			this.btnBack = new System.Windows.Forms.Button();
+			this.btnClose = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// btnChangePwd
@@ -50,18 +55,18 @@ namespace E_Learning
 			// 
 			// btnConfirmPwd
 			// 
-			this.btnConfirmPwd.Location = new System.Drawing.Point(604, 161);
+			this.btnConfirmPwd.Location = new System.Drawing.Point(421, 161);
 			this.btnConfirmPwd.Name = "btnConfirmPwd";
 			this.btnConfirmPwd.Size = new System.Drawing.Size(75, 23);
 			this.btnConfirmPwd.TabIndex = 1;
-			this.btnConfirmPwd.Text = "button2";
+			this.btnConfirmPwd.Text = "Confirm Password";
 			this.btnConfirmPwd.UseVisualStyleBackColor = true;
 			this.btnConfirmPwd.Click += new System.EventHandler(this.btnConfirmPwd_Click);
 			// 
 			// lblOldPwd
 			// 
 			this.lblOldPwd.AutoSize = true;
-			this.lblOldPwd.Location = new System.Drawing.Point(463, 72);
+			this.lblOldPwd.Location = new System.Drawing.Point(280, 72);
 			this.lblOldPwd.Name = "lblOldPwd";
 			this.lblOldPwd.Size = new System.Drawing.Size(109, 15);
 			this.lblOldPwd.TabIndex = 2;
@@ -70,7 +75,7 @@ namespace E_Learning
 			// lblNewPwd
 			// 
 			this.lblNewPwd.AutoSize = true;
-			this.lblNewPwd.Location = new System.Drawing.Point(463, 113);
+			this.lblNewPwd.Location = new System.Drawing.Point(280, 113);
 			this.lblNewPwd.Name = "lblNewPwd";
 			this.lblNewPwd.Size = new System.Drawing.Size(114, 15);
 			this.lblNewPwd.TabIndex = 3;
@@ -78,14 +83,14 @@ namespace E_Learning
 			// 
 			// textBoxOldPwd
 			// 
-			this.textBoxOldPwd.Location = new System.Drawing.Point(587, 72);
+			this.textBoxOldPwd.Location = new System.Drawing.Point(404, 72);
 			this.textBoxOldPwd.Name = "textBoxOldPwd";
 			this.textBoxOldPwd.Size = new System.Drawing.Size(159, 23);
 			this.textBoxOldPwd.TabIndex = 4;
 			// 
 			// textBoxNewPwd
 			// 
-			this.textBoxNewPwd.Location = new System.Drawing.Point(587, 113);
+			this.textBoxNewPwd.Location = new System.Drawing.Point(404, 113);
 			this.textBoxNewPwd.Name = "textBoxNewPwd";
 			this.textBoxNewPwd.Size = new System.Drawing.Size(159, 23);
 			this.textBoxNewPwd.TabIndex = 5;
@@ -99,11 +104,65 @@ namespace E_Learning
 			this.lblCurrentUser.TabIndex = 6;
 			this.lblCurrentUser.Text = "label1";
 			// 
+			// btnViewCourses
+			// 
+			this.btnViewCourses.Location = new System.Drawing.Point(63, 129);
+			this.btnViewCourses.Name = "btnViewCourses";
+			this.btnViewCourses.Size = new System.Drawing.Size(127, 40);
+			this.btnViewCourses.TabIndex = 7;
+			this.btnViewCourses.Text = "View Courses";
+			this.btnViewCourses.UseVisualStyleBackColor = true;
+			this.btnViewCourses.Click += new System.EventHandler(this.btnViewCourses_Click);
+			// 
+			// btnEmail
+			// 
+			this.btnEmail.Location = new System.Drawing.Point(63, 187);
+			this.btnEmail.Name = "btnEmail";
+			this.btnEmail.Size = new System.Drawing.Size(127, 40);
+			this.btnEmail.TabIndex = 8;
+			this.btnEmail.Text = "Email";
+			this.btnEmail.UseVisualStyleBackColor = true;
+			this.btnEmail.Click += new System.EventHandler(this.btnEmail_Click);
+			// 
+			// btnFeedback
+			// 
+			this.btnFeedback.Location = new System.Drawing.Point(63, 244);
+			this.btnFeedback.Name = "btnFeedback";
+			this.btnFeedback.Size = new System.Drawing.Size(127, 40);
+			this.btnFeedback.TabIndex = 9;
+			this.btnFeedback.Text = "Feedback";
+			this.btnFeedback.UseVisualStyleBackColor = true;
+			this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
+			// 
+			// btnBack
+			// 
+			this.btnBack.Location = new System.Drawing.Point(63, 352);
+			this.btnBack.Name = "btnBack";
+			this.btnBack.Size = new System.Drawing.Size(127, 40);
+			this.btnBack.TabIndex = 10;
+			this.btnBack.Text = "Back";
+			this.btnBack.UseVisualStyleBackColor = true;
+			// 
+			// btnClose
+			// 
+			this.btnClose.Location = new System.Drawing.Point(267, 352);
+			this.btnClose.Name = "btnClose";
+			this.btnClose.Size = new System.Drawing.Size(127, 40);
+			this.btnClose.TabIndex = 11;
+			this.btnClose.Text = "Close";
+			this.btnClose.UseVisualStyleBackColor = true;
+			this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+			// 
 			// StudentDashboardForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(616, 421);
+			this.Controls.Add(this.btnClose);
+			this.Controls.Add(this.btnBack);
+			this.Controls.Add(this.btnFeedback);
+			this.Controls.Add(this.btnEmail);
+			this.Controls.Add(this.btnViewCourses);
 			this.Controls.Add(this.lblCurrentUser);
 			this.Controls.Add(this.textBoxNewPwd);
 			this.Controls.Add(this.textBoxOldPwd);
@@ -129,5 +188,10 @@ namespace E_Learning
 		private System.Windows.Forms.TextBox textBoxOldPwd;
 		private System.Windows.Forms.TextBox textBoxNewPwd;
 		private System.Windows.Forms.Label lblCurrentUser;
+		private System.Windows.Forms.Button btnViewCourses;
+		private System.Windows.Forms.Button btnEmail;
+		private System.Windows.Forms.Button btnFeedback;
+		private System.Windows.Forms.Button btnBack;
+		private System.Windows.Forms.Button btnClose;
 	}
 }

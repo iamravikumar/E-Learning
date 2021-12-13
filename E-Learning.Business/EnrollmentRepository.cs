@@ -23,9 +23,21 @@ namespace E_Learning.Business
 			return enrollment;
 		}
 
+		public Enrollment GetEnrollmentByStudentIdAndCourseId(int studentId, int courseId)
+		{
+			Enrollment enrollment = context.Enrollments.Where(p => p.course_id == courseId &&  p.student_id == studentId).FirstOrDefault();
+			return enrollment;
+		}
+
 		public List<Enrollment> GetEnrolmentsByCourseId(int courseId)
 		{
 			List<Enrollment> enrolments = context.Enrollments.Where(p => p.course_id == courseId).ToList();
+			return enrolments;
+		}
+
+		public List<Enrollment> GetEnrolmentsByStudentId(int studentId)
+		{
+			List<Enrollment> enrolments = context.Enrollments.Where(p => p.student_id == studentId).ToList();
 			return enrolments;
 		}
 

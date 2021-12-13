@@ -36,10 +36,11 @@ namespace E_Learning
 			this.allStudentCheckBox = new System.Windows.Forms.CheckBox();
 			this.studentsComboBox = new System.Windows.Forms.ComboBox();
 			this.txtTitle = new System.Windows.Forms.TextBox();
-			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+			this.txtContent = new System.Windows.Forms.RichTextBox();
 			this.btnSend = new System.Windows.Forms.Button();
 			this.btnBack = new System.Windows.Forms.Button();
 			this.btnClose = new System.Windows.Forms.Button();
+			this.lblMessage = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -109,13 +110,13 @@ namespace E_Learning
 			this.txtTitle.Size = new System.Drawing.Size(384, 23);
 			this.txtTitle.TabIndex = 7;
 			// 
-			// richTextBox1
+			// txtContent
 			// 
-			this.richTextBox1.Location = new System.Drawing.Point(124, 193);
-			this.richTextBox1.Name = "richTextBox1";
-			this.richTextBox1.Size = new System.Drawing.Size(384, 164);
-			this.richTextBox1.TabIndex = 8;
-			this.richTextBox1.Text = "";
+			this.txtContent.Location = new System.Drawing.Point(124, 193);
+			this.txtContent.Name = "txtContent";
+			this.txtContent.Size = new System.Drawing.Size(384, 164);
+			this.txtContent.TabIndex = 8;
+			this.txtContent.Text = "";
 			// 
 			// btnSend
 			// 
@@ -150,15 +151,27 @@ namespace E_Learning
 			this.btnClose.UseVisualStyleBackColor = true;
 			this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
 			// 
+			// lblMessage
+			// 
+			this.lblMessage.AutoSize = true;
+			this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.lblMessage.ForeColor = System.Drawing.SystemColors.Desktop;
+			this.lblMessage.Location = new System.Drawing.Point(26, 382);
+			this.lblMessage.Name = "lblMessage";
+			this.lblMessage.Size = new System.Drawing.Size(76, 21);
+			this.lblMessage.TabIndex = 12;
+			this.lblMessage.Text = "Message";
+			// 
 			// TeacherEmailFacility
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(594, 501);
+			this.Controls.Add(this.lblMessage);
 			this.Controls.Add(this.btnClose);
 			this.Controls.Add(this.btnBack);
 			this.Controls.Add(this.btnSend);
-			this.Controls.Add(this.richTextBox1);
+			this.Controls.Add(this.txtContent);
 			this.Controls.Add(this.txtTitle);
 			this.Controls.Add(this.studentsComboBox);
 			this.Controls.Add(this.allStudentCheckBox);
@@ -184,9 +197,10 @@ namespace E_Learning
 		private System.Windows.Forms.CheckBox allStudentCheckBox;
 		private System.Windows.Forms.ComboBox studentsComboBox;
 		private System.Windows.Forms.TextBox txtTitle;
-		private System.Windows.Forms.RichTextBox richTextBox1;
+		private System.Windows.Forms.RichTextBox txtContent;
 		private System.Windows.Forms.Button btnSend;
 		private System.Windows.Forms.Button btnBack;
 		private System.Windows.Forms.Button btnClose;
+		private System.Windows.Forms.Label lblMessage;
 	}
 }
