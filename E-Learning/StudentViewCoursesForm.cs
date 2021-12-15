@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using E_Learning.DAL;
 using E_Learning.Business;
 using System.IO;
+using AltoHttp;
 
 namespace E_Learning
 {
@@ -18,6 +19,8 @@ namespace E_Learning
 		private CourseChapterRepository chapterRepo;
 		private EnrollmentRepository enrollmentRepo;
 		private static int studentId;
+		HttpDownloader downloader;
+
 		public StudentViewCoursesForm()
 		{
 			InitializeComponent();
@@ -84,6 +87,7 @@ namespace E_Learning
 
 		private void btnBack_Click(object sender, EventArgs e)
 		{
+			this.Close();
 			StudentDashboardForm frm = new StudentDashboardForm();
 			frm.Show();
 		}
@@ -97,9 +101,11 @@ namespace E_Learning
 		{
 			//Get the file path from the data grid view
 			int index = contentGRV.CurrentRow.Index;
-			string path = contentGRV.Rows[index].Cells[4].Value.ToString();
-			MessageBox.Show(path);
-			
+			string url = contentGRV.Rows[index].Cells[4].Value.ToString();
+			//MessageBox.Show(url);
+			string path = "C:\\Users\\Admin\\Downloads\\Content" ;
+			downloader = new HttpDownloader(url, path);
+			downloader.Start();
 		}
 	}
 }

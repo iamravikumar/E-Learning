@@ -1,0 +1,19 @@
+﻿Restoring packages for C:\Users\Admin\Documents\Year4 Semester1\OOD\My OOD Project\Project Code\E-Learning\E-Learning\E-Learning.csproj...
+  GET https://api.nuget.org/v3-flatcontainer/altohttp/index.json
+  OK https://api.nuget.org/v3-flatcontainer/altohttp/index.json 956ms
+  GET https://api.nuget.org/v3-flatcontainer/altohttp/1.5.2/altohttp.1.5.2.nupkg
+  OK https://api.nuget.org/v3-flatcontainer/altohttp/1.5.2/altohttp.1.5.2.nupkg 951ms
+Installed AltoHttp 1.5.2 from https://api.nuget.org/v3/index.json with content hash 7XtU++0CWh9gJvhZNx0TOU9KR/vGIhb8gMJU8UStew+JX6lnOyU70ebuLlQjS+TeByTluLfzal22BkbqtHv5LA==.
+Installing NuGet package AltoHttp 1.5.2.
+Committing restore...
+Writing assets file to disk. Path: C:\Users\Admin\Documents\Year4 Semester1\OOD\My OOD Project\Project Code\E-Learning\E-Learning\obj\project.assets.json
+Successfully installed 'AltoHttp 1.5.2' to E-Learning
+Successfully installed 'Newtonsoft.Json 13.0.1' to E-Learning
+Executing nuget actions took 987 ms
+Time Elapsed: 00:00:06.4751618
+========== Finished ==========
+
+Time Elapsed: 00:00:00.3219949
+========== Finished ==========
+
+

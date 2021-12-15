@@ -99,7 +99,8 @@ namespace E_Learning
 
 		private void btnClose_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Environment.Exit(0);
+			//this.Close();
 		}
 	}
 }

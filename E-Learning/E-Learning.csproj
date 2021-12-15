@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AltoHttp" Version="1.5.2" />
     <PackageReference Include="EntityFramework" Version="6.4.4" />
   </ItemGroup>
 
