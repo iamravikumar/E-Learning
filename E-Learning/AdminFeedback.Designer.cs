@@ -43,13 +43,16 @@ namespace E_Learning
 			this.txtTutorName = new System.Windows.Forms.TextBox();
 			this.txtCourseName = new System.Windows.Forms.TextBox();
 			this.label7 = new System.Windows.Forms.Label();
+			this.btnBack = new System.Windows.Forms.Button();
+			this.btnExit = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// btnSendFeedback
 			// 
-			this.btnSendFeedback.Location = new System.Drawing.Point(203, 500);
+			this.btnSendFeedback.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnSendFeedback.Location = new System.Drawing.Point(357, 470);
 			this.btnSendFeedback.Name = "btnSendFeedback";
-			this.btnSendFeedback.Size = new System.Drawing.Size(133, 36);
+			this.btnSendFeedback.Size = new System.Drawing.Size(104, 36);
 			this.btnSendFeedback.TabIndex = 0;
 			this.btnSendFeedback.Text = "Send Feedback";
 			this.btnSendFeedback.UseVisualStyleBackColor = true;
@@ -57,119 +60,150 @@ namespace E_Learning
 			// 
 			// txtFeedbackContent
 			// 
-			this.txtFeedbackContent.Location = new System.Drawing.Point(138, 287);
+			this.txtFeedbackContent.Location = new System.Drawing.Point(163, 280);
 			this.txtFeedbackContent.Name = "txtFeedbackContent";
-			this.txtFeedbackContent.Size = new System.Drawing.Size(298, 184);
+			this.txtFeedbackContent.Size = new System.Drawing.Size(337, 184);
 			this.txtFeedbackContent.TabIndex = 1;
 			this.txtFeedbackContent.Text = "";
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(29, 287);
+			this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.label1.Location = new System.Drawing.Point(54, 280);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(103, 15);
+			this.label1.Size = new System.Drawing.Size(108, 15);
 			this.label1.TabIndex = 2;
 			this.label1.Text = "Feedback Content";
 			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(29, 242);
+			this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.label2.Location = new System.Drawing.Point(54, 235);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(82, 15);
+			this.label2.Size = new System.Drawing.Size(88, 15);
 			this.label2.TabIndex = 3;
 			this.label2.Text = "Feedback Title";
 			// 
 			// txtFeedbackTitle
 			// 
-			this.txtFeedbackTitle.Location = new System.Drawing.Point(138, 242);
+			this.txtFeedbackTitle.Location = new System.Drawing.Point(163, 235);
 			this.txtFeedbackTitle.Name = "txtFeedbackTitle";
-			this.txtFeedbackTitle.Size = new System.Drawing.Size(298, 23);
+			this.txtFeedbackTitle.Size = new System.Drawing.Size(337, 23);
 			this.txtFeedbackTitle.TabIndex = 4;
 			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(34, 78);
+			this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.label3.Location = new System.Drawing.Point(59, 71);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(58, 15);
+			this.label3.Size = new System.Drawing.Size(61, 15);
 			this.label3.TabIndex = 5;
 			this.label3.Text = "Course ID";
 			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(34, 118);
+			this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.label4.Location = new System.Drawing.Point(59, 111);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(79, 15);
+			this.label4.Size = new System.Drawing.Size(81, 15);
 			this.label4.TabIndex = 6;
 			this.label4.Text = "Course Name";
 			// 
 			// label5
 			// 
 			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(34, 156);
+			this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.label5.Location = new System.Drawing.Point(59, 149);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(70, 15);
+			this.label5.Size = new System.Drawing.Size(73, 15);
 			this.label5.TabIndex = 7;
 			this.label5.Text = "Tutor Name";
 			// 
 			// label6
 			// 
 			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(34, 196);
+			this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.label6.Location = new System.Drawing.Point(59, 189);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(72, 15);
+			this.label6.Size = new System.Drawing.Size(78, 15);
 			this.label6.TabIndex = 8;
 			this.label6.Text = "Students IDs";
 			// 
 			// comboBoxStudentsIds
 			// 
 			this.comboBoxStudentsIds.FormattingEnabled = true;
-			this.comboBoxStudentsIds.Location = new System.Drawing.Point(138, 196);
+			this.comboBoxStudentsIds.Location = new System.Drawing.Point(163, 189);
 			this.comboBoxStudentsIds.Name = "comboBoxStudentsIds";
-			this.comboBoxStudentsIds.Size = new System.Drawing.Size(298, 23);
+			this.comboBoxStudentsIds.Size = new System.Drawing.Size(337, 23);
 			this.comboBoxStudentsIds.TabIndex = 9;
 			// 
 			// comboBoxCourseID
 			// 
 			this.comboBoxCourseID.FormattingEnabled = true;
-			this.comboBoxCourseID.Location = new System.Drawing.Point(138, 78);
+			this.comboBoxCourseID.Location = new System.Drawing.Point(163, 71);
 			this.comboBoxCourseID.Name = "comboBoxCourseID";
-			this.comboBoxCourseID.Size = new System.Drawing.Size(298, 23);
+			this.comboBoxCourseID.Size = new System.Drawing.Size(337, 23);
 			this.comboBoxCourseID.TabIndex = 10;
 			this.comboBoxCourseID.SelectedIndexChanged += new System.EventHandler(this.comboBoxCourseID_SelectedIndexChanged);
 			// 
 			// txtTutorName
 			// 
-			this.txtTutorName.Location = new System.Drawing.Point(138, 156);
+			this.txtTutorName.Location = new System.Drawing.Point(163, 149);
 			this.txtTutorName.Name = "txtTutorName";
-			this.txtTutorName.Size = new System.Drawing.Size(298, 23);
+			this.txtTutorName.Size = new System.Drawing.Size(337, 23);
 			this.txtTutorName.TabIndex = 11;
 			// 
 			// txtCourseName
 			// 
-			this.txtCourseName.Location = new System.Drawing.Point(138, 118);
+			this.txtCourseName.Location = new System.Drawing.Point(163, 111);
 			this.txtCourseName.Name = "txtCourseName";
-			this.txtCourseName.Size = new System.Drawing.Size(298, 23);
+			this.txtCourseName.Size = new System.Drawing.Size(337, 23);
 			this.txtCourseName.TabIndex = 12;
 			// 
 			// label7
 			// 
 			this.label7.AutoSize = true;
-			this.label7.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.label7.Location = new System.Drawing.Point(34, 9);
+			this.label7.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
+			this.label7.Location = new System.Drawing.Point(12, 9);
 			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(220, 30);
+			this.label7.Size = new System.Drawing.Size(272, 37);
 			this.label7.TabIndex = 13;
 			this.label7.Text = "Give Feedback Page";
+			// 
+			// btnBack
+			// 
+			this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnBack.Location = new System.Drawing.Point(54, 520);
+			this.btnBack.Name = "btnBack";
+			this.btnBack.Size = new System.Drawing.Size(104, 36);
+			this.btnBack.TabIndex = 14;
+			this.btnBack.Text = "Back";
+			this.btnBack.UseVisualStyleBackColor = true;
+			this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+			// 
+			// btnExit
+			// 
+			this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnExit.Location = new System.Drawing.Point(175, 520);
+			this.btnExit.Name = "btnExit";
+			this.btnExit.Size = new System.Drawing.Size(104, 36);
+			this.btnExit.TabIndex = 15;
+			this.btnExit.Text = "Exit";
+			this.btnExit.UseVisualStyleBackColor = true;
+			this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
 			// 
 			// AdminFeedback
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(636, 559);
+			this.ClientSize = new System.Drawing.Size(541, 575);
+			this.Controls.Add(this.btnExit);
+			this.Controls.Add(this.btnBack);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.txtCourseName);
 			this.Controls.Add(this.txtTutorName);
@@ -209,5 +243,7 @@ namespace E_Learning
 		private System.Windows.Forms.TextBox txtTutorName;
 		private System.Windows.Forms.TextBox txtCourseName;
 		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.Button btnBack;
+		private System.Windows.Forms.Button btnExit;
 	}
 }

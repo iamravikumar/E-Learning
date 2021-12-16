@@ -133,5 +133,17 @@ namespace E_Learning
 				}
 			}
 		}
+
+		private void btnBack_Click(object sender, EventArgs e)
+		{
+			AdminDashboardForm frm = new AdminDashboardForm();
+			frm.Show();
+			this.Hide();
+		}
+
+		private void btnExit_Click(object sender, EventArgs e)
+		{
+			Environment.Exit(0);
+		}
 	}
 }

@@ -114,13 +114,14 @@ namespace E_Learning
 
 		private void btnClose_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Environment.Exit(0);
 		}
 
 		private void btnBack_Click(object sender, EventArgs e)
 		{
 			TeacherDashboardForm frm = new TeacherDashboardForm();
 			frm.Show();
+			this.Hide();
 		}
 		
 	}

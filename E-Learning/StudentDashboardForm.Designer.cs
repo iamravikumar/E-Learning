@@ -45,7 +45,8 @@ namespace E_Learning
 			// 
 			// btnChangePwd
 			// 
-			this.btnChangePwd.Location = new System.Drawing.Point(63, 72);
+			this.btnChangePwd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnChangePwd.Location = new System.Drawing.Point(54, 85);
 			this.btnChangePwd.Name = "btnChangePwd";
 			this.btnChangePwd.Size = new System.Drawing.Size(127, 40);
 			this.btnChangePwd.TabIndex = 0;
@@ -55,9 +56,10 @@ namespace E_Learning
 			// 
 			// btnConfirmPwd
 			// 
-			this.btnConfirmPwd.Location = new System.Drawing.Point(421, 161);
+			this.btnConfirmPwd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnConfirmPwd.Location = new System.Drawing.Point(417, 168);
 			this.btnConfirmPwd.Name = "btnConfirmPwd";
-			this.btnConfirmPwd.Size = new System.Drawing.Size(75, 23);
+			this.btnConfirmPwd.Size = new System.Drawing.Size(136, 39);
 			this.btnConfirmPwd.TabIndex = 1;
 			this.btnConfirmPwd.Text = "Confirm Password";
 			this.btnConfirmPwd.UseVisualStyleBackColor = true;
@@ -66,47 +68,52 @@ namespace E_Learning
 			// lblOldPwd
 			// 
 			this.lblOldPwd.AutoSize = true;
-			this.lblOldPwd.Location = new System.Drawing.Point(280, 72);
+			this.lblOldPwd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.lblOldPwd.Location = new System.Drawing.Point(271, 85);
 			this.lblOldPwd.Name = "lblOldPwd";
-			this.lblOldPwd.Size = new System.Drawing.Size(109, 15);
+			this.lblOldPwd.Size = new System.Drawing.Size(114, 15);
 			this.lblOldPwd.TabIndex = 2;
 			this.lblOldPwd.Text = "Enter Old Password";
 			// 
 			// lblNewPwd
 			// 
 			this.lblNewPwd.AutoSize = true;
-			this.lblNewPwd.Location = new System.Drawing.Point(280, 113);
+			this.lblNewPwd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.lblNewPwd.Location = new System.Drawing.Point(271, 126);
 			this.lblNewPwd.Name = "lblNewPwd";
-			this.lblNewPwd.Size = new System.Drawing.Size(114, 15);
+			this.lblNewPwd.Size = new System.Drawing.Size(121, 15);
 			this.lblNewPwd.TabIndex = 3;
 			this.lblNewPwd.Text = "Enter New Password";
 			// 
 			// textBoxOldPwd
 			// 
-			this.textBoxOldPwd.Location = new System.Drawing.Point(404, 72);
+			this.textBoxOldPwd.Location = new System.Drawing.Point(395, 85);
 			this.textBoxOldPwd.Name = "textBoxOldPwd";
-			this.textBoxOldPwd.Size = new System.Drawing.Size(159, 23);
+			this.textBoxOldPwd.Size = new System.Drawing.Size(201, 23);
 			this.textBoxOldPwd.TabIndex = 4;
 			// 
 			// textBoxNewPwd
 			// 
-			this.textBoxNewPwd.Location = new System.Drawing.Point(404, 113);
+			this.textBoxNewPwd.Location = new System.Drawing.Point(395, 126);
 			this.textBoxNewPwd.Name = "textBoxNewPwd";
-			this.textBoxNewPwd.Size = new System.Drawing.Size(159, 23);
+			this.textBoxNewPwd.Size = new System.Drawing.Size(201, 23);
 			this.textBoxNewPwd.TabIndex = 5;
 			// 
 			// lblCurrentUser
 			// 
 			this.lblCurrentUser.AutoSize = true;
-			this.lblCurrentUser.Location = new System.Drawing.Point(72, 24);
+			this.lblCurrentUser.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.lblCurrentUser.ForeColor = System.Drawing.SystemColors.HotTrack;
+			this.lblCurrentUser.Location = new System.Drawing.Point(12, 26);
 			this.lblCurrentUser.Name = "lblCurrentUser";
-			this.lblCurrentUser.Size = new System.Drawing.Size(38, 15);
+			this.lblCurrentUser.Size = new System.Drawing.Size(96, 37);
 			this.lblCurrentUser.TabIndex = 6;
 			this.lblCurrentUser.Text = "label1";
 			// 
 			// btnViewCourses
 			// 
-			this.btnViewCourses.Location = new System.Drawing.Point(63, 129);
+			this.btnViewCourses.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnViewCourses.Location = new System.Drawing.Point(54, 142);
 			this.btnViewCourses.Name = "btnViewCourses";
 			this.btnViewCourses.Size = new System.Drawing.Size(127, 40);
 			this.btnViewCourses.TabIndex = 7;
@@ -116,7 +123,8 @@ namespace E_Learning
 			// 
 			// btnEmail
 			// 
-			this.btnEmail.Location = new System.Drawing.Point(63, 187);
+			this.btnEmail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnEmail.Location = new System.Drawing.Point(54, 257);
 			this.btnEmail.Name = "btnEmail";
 			this.btnEmail.Size = new System.Drawing.Size(127, 40);
 			this.btnEmail.TabIndex = 8;
@@ -126,7 +134,8 @@ namespace E_Learning
 			// 
 			// btnFeedback
 			// 
-			this.btnFeedback.Location = new System.Drawing.Point(63, 244);
+			this.btnFeedback.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnFeedback.Location = new System.Drawing.Point(54, 198);
 			this.btnFeedback.Name = "btnFeedback";
 			this.btnFeedback.Size = new System.Drawing.Size(127, 40);
 			this.btnFeedback.TabIndex = 9;
@@ -136,18 +145,21 @@ namespace E_Learning
 			// 
 			// btnBack
 			// 
-			this.btnBack.Location = new System.Drawing.Point(63, 352);
+			this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnBack.Location = new System.Drawing.Point(15, 353);
 			this.btnBack.Name = "btnBack";
-			this.btnBack.Size = new System.Drawing.Size(127, 40);
+			this.btnBack.Size = new System.Drawing.Size(105, 36);
 			this.btnBack.TabIndex = 10;
 			this.btnBack.Text = "Back";
 			this.btnBack.UseVisualStyleBackColor = true;
+			this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
 			// 
 			// btnClose
 			// 
-			this.btnClose.Location = new System.Drawing.Point(267, 352);
+			this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnClose.Location = new System.Drawing.Point(148, 353);
 			this.btnClose.Name = "btnClose";
-			this.btnClose.Size = new System.Drawing.Size(127, 40);
+			this.btnClose.Size = new System.Drawing.Size(100, 36);
 			this.btnClose.TabIndex = 11;
 			this.btnClose.Text = "Close";
 			this.btnClose.UseVisualStyleBackColor = true;
@@ -157,7 +169,7 @@ namespace E_Learning
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(616, 421);
+			this.ClientSize = new System.Drawing.Size(616, 416);
 			this.Controls.Add(this.btnClose);
 			this.Controls.Add(this.btnBack);
 			this.Controls.Add(this.btnFeedback);

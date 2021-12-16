@@ -25,6 +25,7 @@ namespace E_Learning
 			this.coursesGDV.EditMode = DataGridViewEditMode.EditOnEnter;
 			this.coursesGDV.ReadOnly = false;
 			RefreshTable();
+			lblMessage.Text = null;
 		}
 
 		private void RefreshTable()
@@ -185,6 +186,18 @@ namespace E_Learning
 			RefreshTable();
 			lblMessage.Visible = true;
 			lblMessage.Text = "Couse was added successfully";
+		}
+
+		private void btnBack_Click(object sender, EventArgs e)
+		{
+			AdminDashboardForm frm = new AdminDashboardForm();
+			frm.Show();
+			this.Hide();
+		}
+
+		private void btnExit_Click(object sender, EventArgs e)
+		{
+			Environment.Exit(0);
 		}
 	}
 }

@@ -66,7 +66,7 @@ namespace E_Learning
 			// coursesComboBox
 			// 
 			this.coursesComboBox.FormattingEnabled = true;
-			this.coursesComboBox.Location = new System.Drawing.Point(205, 55);
+			this.coursesComboBox.Location = new System.Drawing.Point(253, 64);
 			this.coursesComboBox.Name = "coursesComboBox";
 			this.coursesComboBox.Size = new System.Drawing.Size(314, 23);
 			this.coursesComboBox.TabIndex = 0;
@@ -76,7 +76,7 @@ namespace E_Learning
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.label1.Location = new System.Drawing.Point(12, 53);
+			this.label1.Location = new System.Drawing.Point(60, 62);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(99, 21);
 			this.label1.TabIndex = 1;
@@ -86,7 +86,7 @@ namespace E_Learning
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.label2.Location = new System.Drawing.Point(12, 102);
+			this.label2.Location = new System.Drawing.Point(60, 111);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(163, 21);
 			this.label2.TabIndex = 2;
@@ -95,7 +95,7 @@ namespace E_Learning
 			// courseContentComboBox
 			// 
 			this.courseContentComboBox.FormattingEnabled = true;
-			this.courseContentComboBox.Location = new System.Drawing.Point(205, 104);
+			this.courseContentComboBox.Location = new System.Drawing.Point(253, 113);
 			this.courseContentComboBox.Name = "courseContentComboBox";
 			this.courseContentComboBox.Size = new System.Drawing.Size(314, 23);
 			this.courseContentComboBox.TabIndex = 3;
@@ -105,7 +105,7 @@ namespace E_Learning
 			// 
 			this.contentsGRV.AllowUserToOrderColumns = true;
 			this.contentsGRV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.contentsGRV.Location = new System.Drawing.Point(22, 184);
+			this.contentsGRV.Location = new System.Drawing.Point(70, 193);
 			this.contentsGRV.Name = "contentsGRV";
 			this.contentsGRV.RowTemplate.Height = 25;
 			this.contentsGRV.Size = new System.Drawing.Size(552, 148);
@@ -115,7 +115,7 @@ namespace E_Learning
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.label3.Location = new System.Drawing.Point(12, 146);
+			this.label3.Location = new System.Drawing.Point(60, 155);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(142, 21);
 			this.label3.TabIndex = 5;
@@ -123,7 +123,8 @@ namespace E_Learning
 			// 
 			// btnAdd
 			// 
-			this.btnAdd.Location = new System.Drawing.Point(625, 622);
+			this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnAdd.Location = new System.Drawing.Point(673, 631);
 			this.btnAdd.Name = "btnAdd";
 			this.btnAdd.Size = new System.Drawing.Size(128, 32);
 			this.btnAdd.TabIndex = 6;
@@ -133,7 +134,8 @@ namespace E_Learning
 			// 
 			// btnUpdate
 			// 
-			this.btnUpdate.Location = new System.Drawing.Point(21, 349);
+			this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnUpdate.Location = new System.Drawing.Point(69, 358);
 			this.btnUpdate.Name = "btnUpdate";
 			this.btnUpdate.Size = new System.Drawing.Size(128, 34);
 			this.btnUpdate.TabIndex = 7;
@@ -143,7 +145,8 @@ namespace E_Learning
 			// 
 			// btnDelete
 			// 
-			this.btnDelete.Location = new System.Drawing.Point(179, 349);
+			this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnDelete.Location = new System.Drawing.Point(227, 358);
 			this.btnDelete.Name = "btnDelete";
 			this.btnDelete.Size = new System.Drawing.Size(128, 34);
 			this.btnDelete.TabIndex = 8;
@@ -154,7 +157,7 @@ namespace E_Learning
 			// lblMessage
 			// 
 			this.lblMessage.AutoSize = true;
-			this.lblMessage.Location = new System.Drawing.Point(22, 184);
+			this.lblMessage.Location = new System.Drawing.Point(70, 193);
 			this.lblMessage.Name = "lblMessage";
 			this.lblMessage.Size = new System.Drawing.Size(0, 15);
 			this.lblMessage.TabIndex = 9;
@@ -162,17 +165,18 @@ namespace E_Learning
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.label4.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
 			this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
 			this.label4.Location = new System.Drawing.Point(12, 9);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(332, 30);
+			this.label4.Size = new System.Drawing.Size(413, 37);
 			this.label4.TabIndex = 10;
 			this.label4.Text = "Course Content Details Section";
 			// 
 			// btnAddChapter
 			// 
-			this.btnAddChapter.Location = new System.Drawing.Point(625, 476);
+			this.btnAddChapter.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnAddChapter.Location = new System.Drawing.Point(673, 485);
 			this.btnAddChapter.Name = "btnAddChapter";
 			this.btnAddChapter.Size = new System.Drawing.Size(128, 35);
 			this.btnAddChapter.TabIndex = 11;
@@ -182,14 +186,14 @@ namespace E_Learning
 			// 
 			// txtAssighnmentsNo
 			// 
-			this.txtAssighnmentsNo.Location = new System.Drawing.Point(540, 447);
+			this.txtAssighnmentsNo.Location = new System.Drawing.Point(588, 456);
 			this.txtAssighnmentsNo.Name = "txtAssighnmentsNo";
 			this.txtAssighnmentsNo.Size = new System.Drawing.Size(213, 23);
 			this.txtAssighnmentsNo.TabIndex = 13;
 			// 
 			// txtTitle
 			// 
-			this.txtTitle.Location = new System.Drawing.Point(280, 447);
+			this.txtTitle.Location = new System.Drawing.Point(328, 456);
 			this.txtTitle.Name = "txtTitle";
 			this.txtTitle.Size = new System.Drawing.Size(213, 23);
 			this.txtTitle.TabIndex = 14;
@@ -198,7 +202,7 @@ namespace E_Learning
 			// 
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.label5.Location = new System.Drawing.Point(10, 401);
+			this.label5.Location = new System.Drawing.Point(58, 410);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(269, 25);
 			this.label5.TabIndex = 15;
@@ -207,34 +211,37 @@ namespace E_Learning
 			// label6
 			// 
 			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(20, 426);
+			this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.label6.Location = new System.Drawing.Point(68, 435);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(44, 15);
+			this.label6.Size = new System.Drawing.Size(45, 15);
 			this.label6.TabIndex = 16;
 			this.label6.Text = "Course";
 			// 
 			// label7
 			// 
 			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(280, 426);
+			this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.label7.Location = new System.Drawing.Point(328, 435);
 			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(29, 15);
+			this.label7.Size = new System.Drawing.Size(32, 15);
 			this.label7.TabIndex = 17;
 			this.label7.Text = "Title";
 			// 
 			// label8
 			// 
 			this.label8.AutoSize = true;
-			this.label8.Location = new System.Drawing.Point(540, 426);
+			this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.label8.Location = new System.Drawing.Point(588, 435);
 			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(94, 15);
+			this.label8.Size = new System.Drawing.Size(96, 15);
 			this.label8.TabIndex = 18;
 			this.label8.Text = "Assignments No";
 			// 
 			// AddCoursesComboBox
 			// 
 			this.AddCoursesComboBox.FormattingEnabled = true;
-			this.AddCoursesComboBox.Location = new System.Drawing.Point(20, 447);
+			this.AddCoursesComboBox.Location = new System.Drawing.Point(68, 456);
 			this.AddCoursesComboBox.Name = "AddCoursesComboBox";
 			this.AddCoursesComboBox.Size = new System.Drawing.Size(223, 23);
 			this.AddCoursesComboBox.TabIndex = 19;
@@ -242,7 +249,7 @@ namespace E_Learning
 			// AddContentComboBox
 			// 
 			this.AddContentComboBox.FormattingEnabled = true;
-			this.AddContentComboBox.Location = new System.Drawing.Point(15, 568);
+			this.AddContentComboBox.Location = new System.Drawing.Point(63, 577);
 			this.AddContentComboBox.Name = "AddContentComboBox";
 			this.AddContentComboBox.Size = new System.Drawing.Size(223, 23);
 			this.AddContentComboBox.TabIndex = 26;
@@ -250,27 +257,30 @@ namespace E_Learning
 			// lblContentLink
 			// 
 			this.lblContentLink.AutoSize = true;
-			this.lblContentLink.Location = new System.Drawing.Point(15, 613);
+			this.lblContentLink.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.lblContentLink.Location = new System.Drawing.Point(63, 622);
 			this.lblContentLink.Name = "lblContentLink";
-			this.lblContentLink.Size = new System.Drawing.Size(55, 15);
+			this.lblContentLink.Size = new System.Drawing.Size(57, 15);
 			this.lblContentLink.TabIndex = 25;
 			this.lblContentLink.Text = "FilePath: ";
 			// 
 			// label10
 			// 
 			this.label10.AutoSize = true;
-			this.label10.Location = new System.Drawing.Point(275, 547);
+			this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.label10.Location = new System.Drawing.Point(323, 556);
 			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(29, 15);
+			this.label10.Size = new System.Drawing.Size(32, 15);
 			this.label10.TabIndex = 24;
 			this.label10.Text = "Title";
 			// 
 			// label11
 			// 
 			this.label11.AutoSize = true;
-			this.label11.Location = new System.Drawing.Point(15, 547);
+			this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.label11.Location = new System.Drawing.Point(63, 556);
 			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(49, 15);
+			this.label11.Size = new System.Drawing.Size(51, 15);
 			this.label11.TabIndex = 23;
 			this.label11.Text = "Chapter";
 			// 
@@ -278,7 +288,7 @@ namespace E_Learning
 			// 
 			this.label12.AutoSize = true;
 			this.label12.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.label12.Location = new System.Drawing.Point(10, 511);
+			this.label12.Location = new System.Drawing.Point(58, 520);
 			this.label12.Name = "label12";
 			this.label12.Size = new System.Drawing.Size(346, 25);
 			this.label12.TabIndex = 22;
@@ -286,7 +296,7 @@ namespace E_Learning
 			// 
 			// txtContentTitle
 			// 
-			this.txtContentTitle.Location = new System.Drawing.Point(275, 568);
+			this.txtContentTitle.Location = new System.Drawing.Point(323, 577);
 			this.txtContentTitle.Name = "txtContentTitle";
 			this.txtContentTitle.Size = new System.Drawing.Size(213, 23);
 			this.txtContentTitle.TabIndex = 21;
@@ -294,7 +304,7 @@ namespace E_Learning
 			// typeComboBox
 			// 
 			this.typeComboBox.FormattingEnabled = true;
-			this.typeComboBox.Location = new System.Drawing.Point(520, 568);
+			this.typeComboBox.Location = new System.Drawing.Point(568, 577);
 			this.typeComboBox.Name = "typeComboBox";
 			this.typeComboBox.Size = new System.Drawing.Size(223, 23);
 			this.typeComboBox.TabIndex = 28;
@@ -302,15 +312,17 @@ namespace E_Learning
 			// label13
 			// 
 			this.label13.AutoSize = true;
-			this.label13.Location = new System.Drawing.Point(520, 547);
+			this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.label13.Location = new System.Drawing.Point(568, 556);
 			this.label13.Name = "label13";
-			this.label13.Size = new System.Drawing.Size(31, 15);
+			this.label13.Size = new System.Drawing.Size(33, 15);
 			this.label13.TabIndex = 27;
 			this.label13.Text = "Type";
 			// 
 			// btnUpload
 			// 
-			this.btnUpload.Location = new System.Drawing.Point(15, 631);
+			this.btnUpload.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnUpload.Location = new System.Drawing.Point(63, 640);
 			this.btnUpload.Name = "btnUpload";
 			this.btnUpload.Size = new System.Drawing.Size(111, 23);
 			this.btnUpload.TabIndex = 29;
@@ -320,7 +332,8 @@ namespace E_Learning
 			// 
 			// btnBack
 			// 
-			this.btnBack.Location = new System.Drawing.Point(15, 715);
+			this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnBack.Location = new System.Drawing.Point(20, 712);
 			this.btnBack.Name = "btnBack";
 			this.btnBack.Size = new System.Drawing.Size(139, 36);
 			this.btnBack.TabIndex = 30;
@@ -330,9 +343,10 @@ namespace E_Learning
 			// 
 			// btnExit
 			// 
-			this.btnExit.Location = new System.Drawing.Point(205, 715);
+			this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnExit.Location = new System.Drawing.Point(176, 712);
 			this.btnExit.Name = "btnExit";
-			this.btnExit.Size = new System.Drawing.Size(139, 36);
+			this.btnExit.Size = new System.Drawing.Size(93, 36);
 			this.btnExit.TabIndex = 31;
 			this.btnExit.Text = "Quit ";
 			this.btnExit.UseVisualStyleBackColor = true;
@@ -340,7 +354,8 @@ namespace E_Learning
 			// 
 			// btnDeleteChapter
 			// 
-			this.btnDeleteChapter.Location = new System.Drawing.Point(331, 349);
+			this.btnDeleteChapter.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnDeleteChapter.Location = new System.Drawing.Point(379, 358);
 			this.btnDeleteChapter.Name = "btnDeleteChapter";
 			this.btnDeleteChapter.Size = new System.Drawing.Size(128, 34);
 			this.btnDeleteChapter.TabIndex = 32;
@@ -352,7 +367,7 @@ namespace E_Learning
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(780, 779);
+			this.ClientSize = new System.Drawing.Size(850, 773);
 			this.Controls.Add(this.btnDeleteChapter);
 			this.Controls.Add(this.btnExit);
 			this.Controls.Add(this.btnBack);

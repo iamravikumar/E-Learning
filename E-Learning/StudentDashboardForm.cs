@@ -43,7 +43,7 @@ namespace E_Learning
 				}
 			}
 
-			this.lblCurrentUser.Text = fName + ", " + lName;
+			this.lblCurrentUser.Text = fName + ", " + lName + " Main Dashboard";
 
 			//Hide change pwd section
 			lblOldPwd.Visible = false;
@@ -83,24 +83,33 @@ namespace E_Learning
 		{
 			StudentViewCoursesForm frm = new StudentViewCoursesForm();
 			frm.Show();
+			this.Hide();
 		}
 
 		private void btnEmail_Click(object sender, EventArgs e)
 		{
 			StudentEmailForm frm = new StudentEmailForm();
 			frm.Show();
+			this.Hide();
 		}
 
 		private void btnFeedback_Click(object sender, EventArgs e)
 		{
 			StudentFeedbackFrom frm = new StudentFeedbackFrom();
 			frm.Show();
+			this.Hide();
 		}
 
 		private void btnClose_Click(object sender, EventArgs e)
 		{
 			Environment.Exit(0);
-			//this.Close();
+		}
+
+		private void btnBack_Click(object sender, EventArgs e)
+		{
+			MainLogingForm frm = new MainLogingForm();
+			frm.Show();
+			this.Hide();
 		}
 	}
 }

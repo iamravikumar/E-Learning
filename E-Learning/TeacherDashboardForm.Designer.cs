@@ -39,13 +39,16 @@ namespace E_Learning
 			this.label3 = new System.Windows.Forms.Label();
 			this.btnManageCourse = new System.Windows.Forms.Button();
 			this.btnStudentReport = new System.Windows.Forms.Button();
+			this.btnBack = new System.Windows.Forms.Button();
+			this.btnExit = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// btnChangePwd
 			// 
-			this.btnChangePwd.Location = new System.Drawing.Point(66, 114);
+			this.btnChangePwd.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnChangePwd.Location = new System.Drawing.Point(41, 112);
 			this.btnChangePwd.Name = "btnChangePwd";
-			this.btnChangePwd.Size = new System.Drawing.Size(155, 55);
+			this.btnChangePwd.Size = new System.Drawing.Size(155, 39);
 			this.btnChangePwd.TabIndex = 0;
 			this.btnChangePwd.Text = "Change Password";
 			this.btnChangePwd.UseVisualStyleBackColor = true;
@@ -54,18 +57,20 @@ namespace E_Learning
 			// lblCurrentUser
 			// 
 			this.lblCurrentUser.AutoSize = true;
-			this.lblCurrentUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-			this.lblCurrentUser.Location = new System.Drawing.Point(83, 46);
+			this.lblCurrentUser.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.lblCurrentUser.ForeColor = System.Drawing.SystemColors.HotTrack;
+			this.lblCurrentUser.Location = new System.Drawing.Point(12, 18);
 			this.lblCurrentUser.Name = "lblCurrentUser";
-			this.lblCurrentUser.Size = new System.Drawing.Size(52, 21);
+			this.lblCurrentUser.Size = new System.Drawing.Size(96, 37);
 			this.lblCurrentUser.TabIndex = 1;
 			this.lblCurrentUser.Text = "label1";
 			// 
 			// btnConfirmChange
 			// 
-			this.btnConfirmChange.Location = new System.Drawing.Point(405, 171);
+			this.btnConfirmChange.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnConfirmChange.Location = new System.Drawing.Point(487, 225);
 			this.btnConfirmChange.Name = "btnConfirmChange";
-			this.btnConfirmChange.Size = new System.Drawing.Size(150, 40);
+			this.btnConfirmChange.Size = new System.Drawing.Size(114, 35);
 			this.btnConfirmChange.TabIndex = 2;
 			this.btnConfirmChange.Text = "Confirm Change";
 			this.btnConfirmChange.UseVisualStyleBackColor = true;
@@ -74,48 +79,51 @@ namespace E_Learning
 			// lblOldPwd
 			// 
 			this.lblOldPwd.AutoSize = true;
-			this.lblOldPwd.Location = new System.Drawing.Point(348, 107);
+			this.lblOldPwd.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.lblOldPwd.Location = new System.Drawing.Point(349, 100);
 			this.lblOldPwd.Name = "lblOldPwd";
-			this.lblOldPwd.Size = new System.Drawing.Size(109, 15);
+			this.lblOldPwd.Size = new System.Drawing.Size(139, 19);
 			this.lblOldPwd.TabIndex = 3;
 			this.lblOldPwd.Text = "Enter Old Password";
 			// 
 			// lblNewPwd
 			// 
 			this.lblNewPwd.AutoSize = true;
-			this.lblNewPwd.Location = new System.Drawing.Point(348, 136);
+			this.lblNewPwd.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.lblNewPwd.Location = new System.Drawing.Point(349, 159);
 			this.lblNewPwd.Name = "lblNewPwd";
-			this.lblNewPwd.Size = new System.Drawing.Size(114, 15);
+			this.lblNewPwd.Size = new System.Drawing.Size(145, 19);
 			this.lblNewPwd.TabIndex = 4;
 			this.lblNewPwd.Text = "Enter New Password";
 			// 
 			// textBoxOldPwd
 			// 
-			this.textBoxOldPwd.Location = new System.Drawing.Point(468, 104);
+			this.textBoxOldPwd.Location = new System.Drawing.Point(349, 122);
 			this.textBoxOldPwd.Name = "textBoxOldPwd";
-			this.textBoxOldPwd.Size = new System.Drawing.Size(151, 23);
+			this.textBoxOldPwd.Size = new System.Drawing.Size(252, 23);
 			this.textBoxOldPwd.TabIndex = 5;
 			// 
 			// textBoxNewPwd
 			// 
-			this.textBoxNewPwd.Location = new System.Drawing.Point(468, 133);
+			this.textBoxNewPwd.Location = new System.Drawing.Point(349, 181);
 			this.textBoxNewPwd.Name = "textBoxNewPwd";
-			this.textBoxNewPwd.Size = new System.Drawing.Size(151, 23);
+			this.textBoxNewPwd.Size = new System.Drawing.Size(252, 23);
 			this.textBoxNewPwd.TabIndex = 6;
 			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(45, 349);
+			this.label3.Location = new System.Drawing.Point(22, 331);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(0, 15);
 			this.label3.TabIndex = 7;
 			// 
 			// btnManageCourse
 			// 
-			this.btnManageCourse.Location = new System.Drawing.Point(66, 192);
+			this.btnManageCourse.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnManageCourse.Location = new System.Drawing.Point(41, 225);
 			this.btnManageCourse.Name = "btnManageCourse";
-			this.btnManageCourse.Size = new System.Drawing.Size(155, 53);
+			this.btnManageCourse.Size = new System.Drawing.Size(209, 38);
 			this.btnManageCourse.TabIndex = 8;
 			this.btnManageCourse.Text = "Manage Course Contents";
 			this.btnManageCourse.UseVisualStyleBackColor = true;
@@ -123,19 +131,44 @@ namespace E_Learning
 			// 
 			// btnStudentReport
 			// 
-			this.btnStudentReport.Location = new System.Drawing.Point(66, 274);
+			this.btnStudentReport.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnStudentReport.Location = new System.Drawing.Point(41, 173);
 			this.btnStudentReport.Name = "btnStudentReport";
-			this.btnStudentReport.Size = new System.Drawing.Size(155, 53);
+			this.btnStudentReport.Size = new System.Drawing.Size(155, 35);
 			this.btnStudentReport.TabIndex = 9;
 			this.btnStudentReport.Text = "Email Facility";
 			this.btnStudentReport.UseVisualStyleBackColor = true;
 			this.btnStudentReport.Click += new System.EventHandler(this.btnStudentReport_Click);
 			// 
+			// btnBack
+			// 
+			this.btnBack.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnBack.Location = new System.Drawing.Point(22, 308);
+			this.btnBack.Name = "btnBack";
+			this.btnBack.Size = new System.Drawing.Size(75, 38);
+			this.btnBack.TabIndex = 10;
+			this.btnBack.Text = "Back";
+			this.btnBack.UseVisualStyleBackColor = true;
+			this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+			// 
+			// btnExit
+			// 
+			this.btnExit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnExit.Location = new System.Drawing.Point(121, 308);
+			this.btnExit.Name = "btnExit";
+			this.btnExit.Size = new System.Drawing.Size(75, 38);
+			this.btnExit.TabIndex = 11;
+			this.btnExit.Text = "Exit";
+			this.btnExit.UseVisualStyleBackColor = true;
+			this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+			// 
 			// TeacherDashboardForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(729, 384);
+			this.ClientSize = new System.Drawing.Size(619, 365);
+			this.Controls.Add(this.btnExit);
+			this.Controls.Add(this.btnBack);
 			this.Controls.Add(this.btnStudentReport);
 			this.Controls.Add(this.btnManageCourse);
 			this.Controls.Add(this.label3);
@@ -167,5 +200,7 @@ namespace E_Learning
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Button btnManageCourse;
 		private System.Windows.Forms.Button btnStudentReport;
+		private System.Windows.Forms.Button btnBack;
+		private System.Windows.Forms.Button btnExit;
 	}
 }

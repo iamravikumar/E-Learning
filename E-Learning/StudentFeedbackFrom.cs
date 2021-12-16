@@ -12,7 +12,7 @@ namespace E_Learning
 {
 	public partial class StudentFeedbackFrom : Form
 	{
-		private StudentRepository studentRepo;
+		//private StudentRepository studentRepo;
 		private CourseRepository courseRepo;
 		private TeacherRepository teacherRepo;
 		private FeedbackRepository feedbackRepo;
@@ -27,11 +27,12 @@ namespace E_Learning
 
 		private void StudentFeedbackFrom_Load(object sender, EventArgs e)
 		{
-			studentRepo = new StudentRepository();
+			//studentRepo = new StudentRepository();
 			courseRepo = new CourseRepository();
 			teacherRepo = new TeacherRepository();
 			enrollmentRepo = new EnrollmentRepository();
 			studentFeedbackRepo = new StudentFeedbackRepository();
+			feedbackRepo = new FeedbackRepository();
 			//studentId = Global.userId;
 			studentId = 1;
 			PopulateCourses();
@@ -48,32 +49,45 @@ namespace E_Learning
 				course = courseRepo.GetCourseById((int)item.course_id);
 				coursesComboBox.Items.Add(course.id + ", " + course.course_title);
 			}
+
+			rateComboBox.Items.Clear();
+			for (int i = 1; i < 6; i++)
+			{
+				rateComboBox.Items.Add(i);
+			}
 		}
 
 		//Populate all teachers that teach the selected couse
-		private void PopulateTeachers(int courseId)
+		private void PopulateTeachers()
 		{
-			Course course = courseRepo.GetCourseById(courseId);
-			teachersComboBox.Items.Clear();
-			Teacher teacher;
-			List<Course> courses = courseRepo.GetTeachersByCourseId(courseId);
-			foreach (var item in courses)
+			if (coursesComboBox.Text != null)
 			{
-				teacher = teacherRepo.GetTeacherById((int)item.tutor_id);
-				teachersComboBox.Items.Add(teacher.id + ", "+ teacher.first_name + " " + teacher.last_name);
+				int index = coursesComboBox.SelectedItem.ToString().IndexOf(",");
+				int courseId = Convert.ToInt32(coursesComboBox.SelectedItem.ToString().Substring(0, index));
+				Course course = courseRepo.GetCourseById(courseId);
+				teachersComboBox.Items.Clear();
+				Teacher teacher;
+				List<Course> courses = courseRepo.GetTeachersByCourseId(courseId);
+				foreach (var item in courses)
+				{
+					teacher = teacherRepo.GetTeacherById((int)item.tutor_id);
+					teachersComboBox.Items.Add(teacher.id + ", " + teacher.first_name + " " + teacher.last_name);
+				}
+			}else
+			{
+				MessageBox.Show("Select A Course From Courses Drop Donw List");
 			}
 		}
 		
 		private void coursesComboBox_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			int index = coursesComboBox.SelectedItem.ToString().IndexOf(",");
-			int courseId = Convert.ToInt32(coursesComboBox.SelectedItem.ToString().Substring(0, index));
-			PopulateTeachers(courseId);
+			teachersComboBox.Text = null;
+			PopulateTeachers();
 		}
 
 		private void btnClose_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Environment.Exit(0);
 		}
 
 		private void btnSend_Click(object sender, EventArgs e)
@@ -94,17 +108,27 @@ namespace E_Learning
 				feedback.submission_date = DateTime.Now;
 				Enrollment enrollment = enrollmentRepo.GetEnrollmentByStudentIdAndCourseId(studentId, courseId);
 				feedback.enrollment_id = enrollment.id;
+				if (rateComboBox.SelectedItem != null)
+					feedback.rateing_score = Convert.ToInt32(rateComboBox.SelectedItem.ToString());
 				feedbackRepo.Add(feedback);
 				//create student feedback
 				Student_Feedback studentFeedback = new Student_Feedback();
 				studentFeedback.student_id = studentId;
 				studentFeedback.feedback_id = feedback.id;
 				studentFeedbackRepo.Add(studentFeedback);
+				MessageBox.Show("Feedback was sent successfully");
 			}else
 			{
 				MessageBox.Show("You cannot submit a feedback without content");
 			}
 			
+		}
+
+		private void btnBack_Click(object sender, EventArgs e)
+		{
+			StudentDashboardForm frm = new StudentDashboardForm();
+			frm.Show();
+			this.Hide();
 		}
 	}
 }

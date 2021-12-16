@@ -23,6 +23,7 @@ namespace E_Learning
 		private void AdminModifyStaffInfoForm_Load(object sender, EventArgs e)
 		{
 			RefreshTable();
+			lblMessage.Text = "";
 		}
 
 		private void RefreshTable()
@@ -159,5 +160,16 @@ namespace E_Learning
 			btnAdd.Visible = false;
 		}
 
+		private void btnBack_Click(object sender, EventArgs e)
+		{
+			AdminDashboardForm frm = new AdminDashboardForm();
+			frm.Show();
+			this.Hide();
+		}
+
+		private void btnExit_Click(object sender, EventArgs e)
+		{
+			Environment.Exit(0);
+		}
 	}
 }

@@ -147,5 +147,16 @@ namespace E_Learning
 
 		}
 
+		private void btnBack_Click(object sender, EventArgs e)
+		{
+			MainLogingForm frm = new MainLogingForm();
+			frm.Show();
+			this.Hide();
+		}
+
+		private void btnExit_Click(object sender, EventArgs e)
+		{
+			Environment.Exit(0);
+		}
 	}
 }

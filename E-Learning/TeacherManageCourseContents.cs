@@ -184,7 +184,7 @@ namespace E_Learning
 
 		private void btnExit_Click(object sender, EventArgs e)
 		{
-			Close();
+			Environment.Exit(0);
 		}
 
 		// Add a chapter to a course
@@ -247,6 +247,7 @@ namespace E_Learning
 		{
 			TeacherDashboardForm frm = new TeacherDashboardForm();
 			frm.Show();
+			this.Hide();
 		}
 
 		private void btnDeleteChapter_Click(object sender, EventArgs e)

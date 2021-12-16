@@ -24,6 +24,7 @@ namespace E_Learning
 		private void AdminModifyBranchesForm_Load(object sender, EventArgs e)
 		{
 			RefreshTable();
+			label4.Text = null;
 		}
 
 		private void btnNew_Click(object sender, EventArgs e)
@@ -137,6 +138,18 @@ namespace E_Learning
 			RefreshTable();
 			this.label4.Visible = true;
 			this.label4.Text = "Branch Was Added Successfully";
+		}
+
+		private void btnBack_Click(object sender, EventArgs e)
+		{
+			AdminDashboardForm frm = new AdminDashboardForm();
+			frm.Show();
+			this.Hide();
+		}
+
+		private void btnExit_Click(object sender, EventArgs e)
+		{
+			Environment.Exit(0);
 		}
 	}
 }

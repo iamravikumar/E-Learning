@@ -57,7 +57,7 @@ namespace E_Learning
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.label2.Location = new System.Drawing.Point(27, 87);
+			this.label2.Location = new System.Drawing.Point(51, 76);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(63, 21);
 			this.label2.TabIndex = 1;
@@ -66,7 +66,7 @@ namespace E_Learning
 			// contentGRV
 			// 
 			this.contentGRV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.contentGRV.Location = new System.Drawing.Point(127, 200);
+			this.contentGRV.Location = new System.Drawing.Point(151, 151);
 			this.contentGRV.Name = "contentGRV";
 			this.contentGRV.RowTemplate.Height = 25;
 			this.contentGRV.Size = new System.Drawing.Size(532, 141);
@@ -75,9 +75,9 @@ namespace E_Learning
 			// coursesComboBox
 			// 
 			this.coursesComboBox.FormattingEnabled = true;
-			this.coursesComboBox.Location = new System.Drawing.Point(127, 89);
+			this.coursesComboBox.Location = new System.Drawing.Point(151, 78);
 			this.coursesComboBox.Name = "coursesComboBox";
-			this.coursesComboBox.Size = new System.Drawing.Size(245, 23);
+			this.coursesComboBox.Size = new System.Drawing.Size(290, 23);
 			this.coursesComboBox.TabIndex = 3;
 			this.coursesComboBox.SelectedIndexChanged += new System.EventHandler(this.coursesComboBox_SelectedIndexChanged);
 			// 
@@ -85,7 +85,7 @@ namespace E_Learning
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.label3.Location = new System.Drawing.Point(27, 146);
+			this.label3.Location = new System.Drawing.Point(51, 114);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(77, 21);
 			this.label3.TabIndex = 4;
@@ -94,9 +94,9 @@ namespace E_Learning
 			// chaptersComboBox
 			// 
 			this.chaptersComboBox.FormattingEnabled = true;
-			this.chaptersComboBox.Location = new System.Drawing.Point(127, 144);
+			this.chaptersComboBox.Location = new System.Drawing.Point(151, 112);
 			this.chaptersComboBox.Name = "chaptersComboBox";
-			this.chaptersComboBox.Size = new System.Drawing.Size(245, 23);
+			this.chaptersComboBox.Size = new System.Drawing.Size(290, 23);
 			this.chaptersComboBox.TabIndex = 5;
 			this.chaptersComboBox.SelectedIndexChanged += new System.EventHandler(this.chaptersComboBox_SelectedIndexChanged);
 			// 
@@ -104,7 +104,7 @@ namespace E_Learning
 			// 
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.label4.Location = new System.Drawing.Point(27, 200);
+			this.label4.Location = new System.Drawing.Point(51, 151);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(71, 21);
 			this.label4.TabIndex = 6;
@@ -113,7 +113,7 @@ namespace E_Learning
 			// btnDownload
 			// 
 			this.btnDownload.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.btnDownload.Location = new System.Drawing.Point(549, 362);
+			this.btnDownload.Location = new System.Drawing.Point(573, 313);
 			this.btnDownload.Name = "btnDownload";
 			this.btnDownload.Size = new System.Drawing.Size(110, 31);
 			this.btnDownload.TabIndex = 7;
@@ -124,7 +124,7 @@ namespace E_Learning
 			// btnBack
 			// 
 			this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.btnBack.Location = new System.Drawing.Point(32, 397);
+			this.btnBack.Location = new System.Drawing.Point(50, 357);
 			this.btnBack.Name = "btnBack";
 			this.btnBack.Size = new System.Drawing.Size(110, 31);
 			this.btnBack.TabIndex = 8;
@@ -135,7 +135,7 @@ namespace E_Learning
 			// btnClose
 			// 
 			this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.btnClose.Location = new System.Drawing.Point(173, 397);
+			this.btnClose.Location = new System.Drawing.Point(191, 357);
 			this.btnClose.Name = "btnClose";
 			this.btnClose.Size = new System.Drawing.Size(110, 31);
 			this.btnClose.TabIndex = 9;
@@ -147,7 +147,7 @@ namespace E_Learning
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(731, 471);
+			this.ClientSize = new System.Drawing.Size(718, 405);
 			this.Controls.Add(this.btnClose);
 			this.Controls.Add(this.btnBack);
 			this.Controls.Add(this.btnDownload);

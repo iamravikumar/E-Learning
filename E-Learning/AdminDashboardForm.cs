@@ -37,38 +37,54 @@ namespace E_Learning
 					break;
 				}
 			}
-
-			this.lblCurrentUser.Text = fName + ", " + lName;
+			this.lblCurrentUser.Text = fName + ", " + lName + " Main Dashboard";
 		}
 
 		private void btnModifyCourses_Click(object sender, EventArgs e)
 		{
 			AdminModifyCoursesForm frm = new AdminModifyCoursesForm();
 			frm.Show();
+			this.Hide();
 		}
 
 		private void btnModifyBranches_Click(object sender, EventArgs e)
 		{
 			AdminModifyBranchesForm frm = new AdminModifyBranchesForm();
 			frm.Show();
+			this.Hide();
 		}
 
 		private void btnModifyStaffInfo_Click(object sender, EventArgs e)
 		{
 			AdminModifyStaffInfoForm frm = new AdminModifyStaffInfoForm();
 			frm.Show();
+			this.Hide();
 		}
 
 		private void btnUploadDownloadInfo_Click(object sender, EventArgs e)
 		{
 			AdminUploadDownloadInfoForm frm = new AdminUploadDownloadInfoForm();
 			frm.Show();
+			this.Hide();
 		}
 
 		private void btnFeedback_Click(object sender, EventArgs e)
 		{
 			AdminFeedback frm = new AdminFeedback();
 			frm.Show();
+			this.Hide();
+		}
+
+		private void btnBack_Click(object sender, EventArgs e)
+		{
+			MainLogingForm frm = new MainLogingForm();
+			frm.Show();
+			this.Hide();
+		}
+
+		private void btnExit_Click(object sender, EventArgs e)
+		{
+			Environment.Exit(0);
 		}
 	}
 }

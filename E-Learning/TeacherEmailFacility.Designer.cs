@@ -58,7 +58,7 @@ namespace E_Learning
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.label2.Location = new System.Drawing.Point(26, 70);
+			this.label2.Location = new System.Drawing.Point(48, 71);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(32, 21);
 			this.label2.TabIndex = 1;
@@ -68,7 +68,7 @@ namespace E_Learning
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.label3.Location = new System.Drawing.Point(26, 139);
+			this.label3.Location = new System.Drawing.Point(48, 115);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(48, 21);
 			this.label3.TabIndex = 2;
@@ -78,7 +78,7 @@ namespace E_Learning
 			// 
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.label5.Location = new System.Drawing.Point(26, 193);
+			this.label5.Location = new System.Drawing.Point(48, 162);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(71, 21);
 			this.label5.TabIndex = 4;
@@ -88,7 +88,7 @@ namespace E_Learning
 			// 
 			this.allStudentCheckBox.AutoSize = true;
 			this.allStudentCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.allStudentCheckBox.Location = new System.Drawing.Point(387, 72);
+			this.allStudentCheckBox.Location = new System.Drawing.Point(409, 73);
 			this.allStudentCheckBox.Name = "allStudentCheckBox";
 			this.allStudentCheckBox.Size = new System.Drawing.Size(121, 25);
 			this.allStudentCheckBox.TabIndex = 5;
@@ -98,21 +98,21 @@ namespace E_Learning
 			// studentsComboBox
 			// 
 			this.studentsComboBox.FormattingEnabled = true;
-			this.studentsComboBox.Location = new System.Drawing.Point(124, 72);
+			this.studentsComboBox.Location = new System.Drawing.Point(146, 73);
 			this.studentsComboBox.Name = "studentsComboBox";
 			this.studentsComboBox.Size = new System.Drawing.Size(238, 23);
 			this.studentsComboBox.TabIndex = 6;
 			// 
 			// txtTitle
 			// 
-			this.txtTitle.Location = new System.Drawing.Point(124, 137);
+			this.txtTitle.Location = new System.Drawing.Point(146, 115);
 			this.txtTitle.Name = "txtTitle";
 			this.txtTitle.Size = new System.Drawing.Size(384, 23);
 			this.txtTitle.TabIndex = 7;
 			// 
 			// txtContent
 			// 
-			this.txtContent.Location = new System.Drawing.Point(124, 193);
+			this.txtContent.Location = new System.Drawing.Point(146, 162);
 			this.txtContent.Name = "txtContent";
 			this.txtContent.Size = new System.Drawing.Size(384, 164);
 			this.txtContent.TabIndex = 8;
@@ -121,9 +121,9 @@ namespace E_Learning
 			// btnSend
 			// 
 			this.btnSend.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.btnSend.Location = new System.Drawing.Point(387, 382);
+			this.btnSend.Location = new System.Drawing.Point(434, 343);
 			this.btnSend.Name = "btnSend";
-			this.btnSend.Size = new System.Drawing.Size(121, 38);
+			this.btnSend.Size = new System.Drawing.Size(96, 29);
 			this.btnSend.TabIndex = 9;
 			this.btnSend.Text = "Send";
 			this.btnSend.UseVisualStyleBackColor = true;
@@ -132,9 +132,9 @@ namespace E_Learning
 			// btnBack
 			// 
 			this.btnBack.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.btnBack.Location = new System.Drawing.Point(32, 435);
+			this.btnBack.Location = new System.Drawing.Point(41, 410);
 			this.btnBack.Name = "btnBack";
-			this.btnBack.Size = new System.Drawing.Size(119, 38);
+			this.btnBack.Size = new System.Drawing.Size(87, 38);
 			this.btnBack.TabIndex = 10;
 			this.btnBack.Text = "Back";
 			this.btnBack.UseVisualStyleBackColor = true;
@@ -143,9 +143,9 @@ namespace E_Learning
 			// btnClose
 			// 
 			this.btnClose.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.btnClose.Location = new System.Drawing.Point(171, 435);
+			this.btnClose.Location = new System.Drawing.Point(146, 410);
 			this.btnClose.Name = "btnClose";
-			this.btnClose.Size = new System.Drawing.Size(110, 38);
+			this.btnClose.Size = new System.Drawing.Size(84, 38);
 			this.btnClose.TabIndex = 11;
 			this.btnClose.Text = "Close";
 			this.btnClose.UseVisualStyleBackColor = true;
@@ -156,7 +156,7 @@ namespace E_Learning
 			this.lblMessage.AutoSize = true;
 			this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
 			this.lblMessage.ForeColor = System.Drawing.SystemColors.Desktop;
-			this.lblMessage.Location = new System.Drawing.Point(26, 382);
+			this.lblMessage.Location = new System.Drawing.Point(48, 351);
 			this.lblMessage.Name = "lblMessage";
 			this.lblMessage.Size = new System.Drawing.Size(76, 21);
 			this.lblMessage.TabIndex = 12;
@@ -166,7 +166,7 @@ namespace E_Learning
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(594, 501);
+			this.ClientSize = new System.Drawing.Size(567, 467);
 			this.Controls.Add(this.lblMessage);
 			this.Controls.Add(this.btnClose);
 			this.Controls.Add(this.btnBack);

@@ -21,6 +21,7 @@ namespace E_Learning
 			Global.type = 1;
 			AdminLoginForm frm = new AdminLoginForm();
 			frm.Show();
+			this.Hide();
 		}
 
 		private void btnTchLogin_Click(object sender, EventArgs e)
@@ -28,6 +29,7 @@ namespace E_Learning
 			Global.type = 2;
 			TeacherLoginForm frm = new TeacherLoginForm();
 			frm.Show();
+			this.Hide();
 		}
 
 		private void btnStdLogin_Click(object sender, EventArgs e)
@@ -35,12 +37,19 @@ namespace E_Learning
 			Global.type = 3;
 			StudentLoginForm frm = new StudentLoginForm();
 			frm.Show();
+			this.Hide();
 		}
 
 		private void btnRegister_Click(object sender, EventArgs e)
 		{
 			RegistrationForm frm = new RegistrationForm();
 			frm.Show();
+			this.Hide();
+		}
+
+		private void btnExit_Click(object sender, EventArgs e)
+		{
+			Environment.Exit(0);
 		}
 	}
 }

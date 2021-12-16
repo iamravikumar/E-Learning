@@ -35,12 +35,14 @@ namespace E_Learning
 			this.btnUploadDownloadInfo = new System.Windows.Forms.Button();
 			this.btnFeedback = new System.Windows.Forms.Button();
 			this.lblCurrentUser = new System.Windows.Forms.Label();
+			this.btnBack = new System.Windows.Forms.Button();
+			this.btnExit = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// btnModifyBranches
 			// 
 			this.btnModifyBranches.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.btnModifyBranches.Location = new System.Drawing.Point(103, 140);
+			this.btnModifyBranches.Location = new System.Drawing.Point(68, 121);
 			this.btnModifyBranches.Name = "btnModifyBranches";
 			this.btnModifyBranches.Size = new System.Drawing.Size(167, 46);
 			this.btnModifyBranches.TabIndex = 0;
@@ -51,7 +53,7 @@ namespace E_Learning
 			// btnModifyCourses
 			// 
 			this.btnModifyCourses.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.btnModifyCourses.Location = new System.Drawing.Point(313, 140);
+			this.btnModifyCourses.Location = new System.Drawing.Point(251, 194);
 			this.btnModifyCourses.Name = "btnModifyCourses";
 			this.btnModifyCourses.Size = new System.Drawing.Size(167, 46);
 			this.btnModifyCourses.TabIndex = 1;
@@ -62,7 +64,7 @@ namespace E_Learning
 			// btnModifyStaffInfo
 			// 
 			this.btnModifyStaffInfo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.btnModifyStaffInfo.Location = new System.Drawing.Point(103, 225);
+			this.btnModifyStaffInfo.Location = new System.Drawing.Point(68, 194);
 			this.btnModifyStaffInfo.Name = "btnModifyStaffInfo";
 			this.btnModifyStaffInfo.Size = new System.Drawing.Size(167, 46);
 			this.btnModifyStaffInfo.TabIndex = 2;
@@ -73,9 +75,9 @@ namespace E_Learning
 			// btnUploadDownloadInfo
 			// 
 			this.btnUploadDownloadInfo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.btnUploadDownloadInfo.Location = new System.Drawing.Point(313, 225);
+			this.btnUploadDownloadInfo.Location = new System.Drawing.Point(251, 121);
 			this.btnUploadDownloadInfo.Name = "btnUploadDownloadInfo";
-			this.btnUploadDownloadInfo.Size = new System.Drawing.Size(167, 46);
+			this.btnUploadDownloadInfo.Size = new System.Drawing.Size(215, 46);
 			this.btnUploadDownloadInfo.TabIndex = 3;
 			this.btnUploadDownloadInfo.Text = "Upload & Download Information";
 			this.btnUploadDownloadInfo.UseVisualStyleBackColor = true;
@@ -84,9 +86,9 @@ namespace E_Learning
 			// btnFeedback
 			// 
 			this.btnFeedback.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.btnFeedback.Location = new System.Drawing.Point(200, 299);
+			this.btnFeedback.Location = new System.Drawing.Point(438, 194);
 			this.btnFeedback.Name = "btnFeedback";
-			this.btnFeedback.Size = new System.Drawing.Size(167, 46);
+			this.btnFeedback.Size = new System.Drawing.Size(125, 46);
 			this.btnFeedback.TabIndex = 4;
 			this.btnFeedback.Text = "Feedback";
 			this.btnFeedback.UseVisualStyleBackColor = true;
@@ -95,18 +97,43 @@ namespace E_Learning
 			// lblCurrentUser
 			// 
 			this.lblCurrentUser.AutoSize = true;
-			this.lblCurrentUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-			this.lblCurrentUser.Location = new System.Drawing.Point(79, 61);
+			this.lblCurrentUser.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+			this.lblCurrentUser.ForeColor = System.Drawing.SystemColors.HotTrack;
+			this.lblCurrentUser.Location = new System.Drawing.Point(22, 25);
 			this.lblCurrentUser.Name = "lblCurrentUser";
-			this.lblCurrentUser.Size = new System.Drawing.Size(52, 21);
+			this.lblCurrentUser.Size = new System.Drawing.Size(90, 37);
 			this.lblCurrentUser.TabIndex = 5;
 			this.lblCurrentUser.Text = "label1";
+			// 
+			// btnBack
+			// 
+			this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnBack.Location = new System.Drawing.Point(28, 309);
+			this.btnBack.Name = "btnBack";
+			this.btnBack.Size = new System.Drawing.Size(100, 34);
+			this.btnBack.TabIndex = 6;
+			this.btnBack.Text = "Back";
+			this.btnBack.UseVisualStyleBackColor = true;
+			this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+			// 
+			// btnExit
+			// 
+			this.btnExit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnExit.Location = new System.Drawing.Point(150, 309);
+			this.btnExit.Name = "btnExit";
+			this.btnExit.Size = new System.Drawing.Size(100, 34);
+			this.btnExit.TabIndex = 7;
+			this.btnExit.Text = "Exit";
+			this.btnExit.UseVisualStyleBackColor = true;
+			this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
 			// 
 			// AdminDashboardForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(599, 408);
+			this.ClientSize = new System.Drawing.Size(599, 385);
+			this.Controls.Add(this.btnExit);
+			this.Controls.Add(this.btnBack);
 			this.Controls.Add(this.lblCurrentUser);
 			this.Controls.Add(this.btnFeedback);
 			this.Controls.Add(this.btnUploadDownloadInfo);
@@ -130,5 +157,7 @@ namespace E_Learning
 		private System.Windows.Forms.Button btnUploadDownloadInfo;
 		private System.Windows.Forms.Button btnFeedback;
 		private System.Windows.Forms.Label lblCurrentUser;
+		private System.Windows.Forms.Button btnBack;
+		private System.Windows.Forms.Button btnExit;
 	}
 }

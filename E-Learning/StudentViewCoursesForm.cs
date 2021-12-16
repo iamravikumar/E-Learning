@@ -7,8 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using E_Learning.DAL;
 using E_Learning.Business;
-using System.IO;
-using AltoHttp;
+using System.Diagnostics;
 
 namespace E_Learning
 {
@@ -19,7 +18,6 @@ namespace E_Learning
 		private CourseChapterRepository chapterRepo;
 		private EnrollmentRepository enrollmentRepo;
 		private static int studentId;
-		HttpDownloader downloader;
 
 		public StudentViewCoursesForm()
 		{
@@ -87,9 +85,10 @@ namespace E_Learning
 
 		private void btnBack_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			
 			StudentDashboardForm frm = new StudentDashboardForm();
 			frm.Show();
+			this.Hide();
 		}
 
 		private void btnClose_Click(object sender, EventArgs e)
@@ -99,13 +98,22 @@ namespace E_Learning
 
 		private void btnDownload_Click(object sender, EventArgs e)
 		{
-			//Get the file path from the data grid view
-			int index = contentGRV.CurrentRow.Index;
-			string url = contentGRV.Rows[index].Cells[4].Value.ToString();
-			//MessageBox.Show(url);
-			string path = "C:\\Users\\Admin\\Downloads\\Content" ;
-			downloader = new HttpDownloader(url, path);
-			downloader.Start();
+			try
+			{				
+				//Get the file path from the data grid view
+				int index = contentGRV.CurrentRow.Index;
+				string url = contentGRV.Rows[index].Cells[4].Value.ToString();
+				/*Process p = new Process();
+				ProcessStartInfo ps = new ProcessStartInfo(url);
+				p.StartInfo = ps;
+				p.Start();*/
+				/*OpenFileDialog openFile = new OpenFileDialog();
+				openFile.FileName = url;
+				openFile.OpenFile();*/
+			}catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
 		}
 	}
 }
