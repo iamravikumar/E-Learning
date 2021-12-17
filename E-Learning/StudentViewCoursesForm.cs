@@ -103,14 +103,15 @@ namespace E_Learning
 				//Get the file path from the data grid view
 				int index = contentGRV.CurrentRow.Index;
 				string url = contentGRV.Rows[index].Cells[4].Value.ToString();
-				/*Process p = new Process();
+				Process p = new Process();
 				ProcessStartInfo ps = new ProcessStartInfo(url);
 				p.StartInfo = ps;
-				p.Start();*/
+				p.Start();
 				/*OpenFileDialog openFile = new OpenFileDialog();
 				openFile.FileName = url;
 				openFile.OpenFile();*/
-			}catch (Exception ex)
+			}
+			catch (Exception ex)
 			{
 				MessageBox.Show(ex.Message);
 			}

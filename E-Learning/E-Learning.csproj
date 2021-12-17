@@ -5,7 +5,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>E_Learning</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
-    <ApplicationIcon>e-learning icon.ico</ApplicationIcon>
+    <ApplicationIcon>Images\e-learning icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
