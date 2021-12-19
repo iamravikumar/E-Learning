@@ -27,6 +27,12 @@ namespace E_Learning.Business
 			return student;
 		}
 
+		public List<int> GetAllStudentsIds()
+		{
+			List<int> students = context.Students.Select(p => p.id).ToList();
+			return students;
+		}
+
 		public void Add(Student student)
 		{
 			try

@@ -25,6 +25,12 @@ namespace E_Learning.Business
 			return teacher;
 		}
 
+		public List<int> GetAllTeachersIds()
+		{
+			List<int> teachers = context.Students.Select(p => p.id).ToList();
+			return teachers;
+		}
+
 		public void Add(Teacher teacher)
 		{
 			try

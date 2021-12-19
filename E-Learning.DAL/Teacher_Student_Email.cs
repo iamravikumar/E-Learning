@@ -17,8 +17,10 @@ namespace E_Learning.DAL
         public int id { get; set; }
         public Nullable<int> teacher_email_id { get; set; }
         public Nullable<int> student_email_id { get; set; }
+        public Nullable<int> admin_email_id { get; set; }
     
         public virtual Student_Email Student_Email { get; set; }
         public virtual Teacher_Email Teacher_Email { get; set; }
+        public virtual Admin_Email Admin_Email { get; set; }
     }
 }

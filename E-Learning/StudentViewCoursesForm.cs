@@ -30,8 +30,7 @@ namespace E_Learning
 			contentRepo = new CourseChapterContentRepository();
 			chapterRepo = new CourseChapterRepository();
 			enrollmentRepo = new EnrollmentRepository();
-			//studentId = Global.userId;
-			studentId = 1;
+			studentId = Global.userId;
 			PopulateUserCourses();
 		}
 

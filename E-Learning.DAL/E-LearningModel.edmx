@@ -17,6 +17,17 @@
           <Property Name="image" Type="image" />
           <Property Name="roll_id" Type="int" />
         </EntityType>
+        <EntityType Name="Admin_Email">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="admin_id" Type="int" />
+          <Property Name="email_to" Type="int" />
+          <Property Name="text" Type="nvarchar" MaxLength="3500" />
+          <Property Name="title" Type="nvarchar" MaxLength="500" />
+          <Property Name="send_date" Type="datetime" />
+        </EntityType>
         <EntityType Name="Admin_Feedback">
           <Key>
             <PropertyRef Name="id" />
@@ -147,6 +158,7 @@
           <Property Name="text" Type="nvarchar" MaxLength="2000" />
           <Property Name="title" Type="nvarchar" MaxLength="1000" />
           <Property Name="send_date" Type="datetime" />
+          <Property Name="email_from" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Student_Feedback">
           <Key>
@@ -190,6 +202,7 @@
           <Property Name="text" Type="nvarchar" MaxLength="2000" />
           <Property Name="title" Type="nvarchar" MaxLength="1000" />
           <Property Name="send-date" Type="datetime" />
+          <Property Name="email_from" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Teacher_Student_Email">
           <Key>
@@ -198,7 +211,20 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="teacher_email_id" Type="int" />
           <Property Name="student_email_id" Type="int" />
+          <Property Name="admin_email_id" Type="int" />
         </EntityType>
+        <Association Name="FK_Admin_Email_Admin">
+          <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />
+          <End Role="Admin_Email" Type="Self.Admin_Email" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admin">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Admin_Email">
+              <PropertyRef Name="admin_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Admin_Feedback_Admin">
           <End Role="Admin" Type="Self.Admin" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
@@ -445,6 +471,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Teacher_Student_Email_Admin_Email">
+          <End Role="Admin_Email" Type="Self.Admin_Email" Multiplicity="0..1" />
+          <End Role="Teacher_Student_Email" Type="Self.Teacher_Student_Email" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admin_Email">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Teacher_Student_Email">
+              <PropertyRef Name="admin_email_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Teacher_Student_Email_Student_Email">
           <End Role="Student_Email" Type="Self.Student_Email" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
@@ -506,6 +544,7 @@
         <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="ModelStoreContainer">
           <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Admin_Email" EntityType="Self.Admin_Email" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Admin_Feedback" EntityType="Self.Admin_Feedback" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Branch" EntityType="Self.Branch" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Content_Type" EntityType="Self.Content_Type" Schema="dbo" store:Type="Tables" />
@@ -525,6 +564,10 @@
           <EntitySet Name="Teacher" EntityType="Self.Teacher" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Teacher_Email" EntityType="Self.Teacher_Email" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Teacher_Student_Email" EntityType="Self.Teacher_Student_Email" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Admin_Email_Admin" Association="Self.FK_Admin_Email_Admin">
+            <End Role="Admin" EntitySet="Admin" />
+            <End Role="Admin_Email" EntitySet="Admin_Email" />
+          </AssociationSet>
           <AssociationSet Name="FK_Admin_Feedback_Admin" Association="Self.FK_Admin_Feedback_Admin">
             <End Role="Admin" EntitySet="Admin" />
             <End Role="Admin_Feedback" EntitySet="Admin_Feedback" />
@@ -597,6 +640,10 @@
             <End Role="Roll" EntitySet="Roll" />
             <End Role="Teacher" EntitySet="Teacher" />
           </AssociationSet>
+          <AssociationSet Name="FK_Teacher_Student_Email_Admin_Email" Association="Self.FK_Teacher_Student_Email_Admin_Email">
+            <End Role="Admin_Email" EntitySet="Admin_Email" />
+            <End Role="Teacher_Student_Email" EntitySet="Teacher_Student_Email" />
+          </AssociationSet>
           <AssociationSet Name="FK_Teacher_Student_Email_Student_Email" Association="Self.FK_Teacher_Student_Email_Student_Email">
             <End Role="Student_Email" EntitySet="Student_Email" />
             <End Role="Teacher_Student_Email" EntitySet="Teacher_Student_Email" />
@@ -657,7 +704,6 @@
           <EntitySet Name="Students" EntityType="Model.Student" />
           <EntitySet Name="sysdiagrams" EntityType="Model.sysdiagram" />
           <EntitySet Name="Teachers" EntityType="Model.Teacher" />
-          <EntitySet Name="Teacher_Student_Email" EntityType="Model.Teacher_Student_Email" />
           <AssociationSet Name="FK_Admin_Feedback_Admin" Association="Model.FK_Admin_Feedback_Admin">
             <End Role="Admin" EntitySet="Admins" />
             <End Role="Admin_Feedback" EntitySet="Admin_Feedback" />
@@ -718,8 +764,18 @@
             <End Role="Roll" EntitySet="Rolls" />
             <End Role="Teacher" EntitySet="Teachers" />
           </AssociationSet>
+          <EntitySet Name="Student_Feedback" EntityType="Model.Student_Feedback" />
+          <AssociationSet Name="FK_Student_Feedback_Feedback" Association="Model.FK_Student_Feedback_Feedback">
+            <End Role="Feedback" EntitySet="Feedbacks" />
+            <End Role="Student_Feedback" EntitySet="Student_Feedback" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Student_Feedback_Student" Association="Model.FK_Student_Feedback_Student">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="Student_Feedback" EntitySet="Student_Feedback" />
+          </AssociationSet>
           <EntitySet Name="Student_Email" EntityType="Model.Student_Email" />
           <EntitySet Name="Teacher_Email" EntityType="Model.Teacher_Email" />
+          <EntitySet Name="Teacher_Student_Email" EntityType="Model.Teacher_Student_Email" />
           <AssociationSet Name="FK_Student_Email_Student" Association="Model.FK_Student_Email_Student">
             <End Role="Student" EntitySet="Students" />
             <End Role="Student_Email" EntitySet="Student_Email" />
@@ -732,14 +788,14 @@
             <End Role="Teacher_Email" EntitySet="Teacher_Email" />
             <End Role="Teacher_Student_Email" EntitySet="Teacher_Student_Email" />
           </AssociationSet>
-          <EntitySet Name="Student_Feedback" EntityType="Model.Student_Feedback" />
-          <AssociationSet Name="FK_Student_Feedback_Feedback" Association="Model.FK_Student_Feedback_Feedback">
-            <End Role="Feedback" EntitySet="Feedbacks" />
-            <End Role="Student_Feedback" EntitySet="Student_Feedback" />
+          <EntitySet Name="Admin_Email" EntityType="Model.Admin_Email" />
+          <AssociationSet Name="FK_Admin_Email_Admin" Association="Model.FK_Admin_Email_Admin">
+            <End Role="Admin" EntitySet="Admins" />
+            <End Role="Admin_Email" EntitySet="Admin_Email" />
           </AssociationSet>
-          <AssociationSet Name="FK_Student_Feedback_Student" Association="Model.FK_Student_Feedback_Student">
-            <End Role="Student" EntitySet="Students" />
-            <End Role="Student_Feedback" EntitySet="Student_Feedback" />
+          <AssociationSet Name="FK_Teacher_Student_Email_Admin_Email" Association="Model.FK_Teacher_Student_Email_Admin_Email">
+            <End Role="Admin_Email" EntitySet="Admin_Email" />
+            <End Role="Teacher_Student_Email" EntitySet="Teacher_Student_Email" />
           </AssociationSet>
           </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
@@ -766,6 +822,7 @@
           <Property Name="roll_id" Type="Int32" />
           <NavigationProperty Name="Admin_Feedback" Relationship="Model.FK_Admin_Feedback_Admin" FromRole="Admin" ToRole="Admin_Feedback" />
           <NavigationProperty Name="Roll" Relationship="Model.FK_Admin_Roll" FromRole="Admin" ToRole="Roll" />
+          <NavigationProperty Name="Admin_Email" Relationship="Model.FK_Admin_Email_Admin" FromRole="Admin" ToRole="Admin_Email" />
         </EntityType>
         <EntityType Name="Admin_Feedback">
           <Key>
@@ -912,8 +969,8 @@
           <NavigationProperty Name="Branch" Relationship="Model.FK_Student_Branch" FromRole="Student" ToRole="Branch" />
           <NavigationProperty Name="Enrollments" Relationship="Model.FK_Enrollment_Student" FromRole="Student" ToRole="Enrollment" />
           <NavigationProperty Name="Roll" Relationship="Model.FK_Student_Roll" FromRole="Student" ToRole="Roll" />
-          <NavigationProperty Name="Student_Email" Relationship="Model.FK_Student_Email_Student" FromRole="Student" ToRole="Student_Email" />
           <NavigationProperty Name="Student_Feedback" Relationship="Model.FK_Student_Feedback_Student" FromRole="Student" ToRole="Student_Feedback" />
+          <NavigationProperty Name="Student_Email" Relationship="Model.FK_Student_Email_Student" FromRole="Student" ToRole="Student_Email" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -941,16 +998,6 @@
           <NavigationProperty Name="Courses" Relationship="Model.FK_Course_Teacher" FromRole="Teacher" ToRole="Course" />
           <NavigationProperty Name="Department" Relationship="Model.FK_Teacher_Department" FromRole="Teacher" ToRole="Department" />
           <NavigationProperty Name="Roll" Relationship="Model.FK_Teacher_Roll" FromRole="Teacher" ToRole="Roll" />
-        </EntityType>
-        <EntityType Name="Teacher_Student_Email">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="teacher_email_id" Type="Int32" />
-          <Property Name="student_email_id" Type="Int32" />
-          <NavigationProperty Name="Student_Email" Relationship="Model.FK_Teacher_Student_Email_Student_Email" FromRole="Teacher_Student_Email" ToRole="Student_Email" />
-          <NavigationProperty Name="Teacher_Email" Relationship="Model.FK_Teacher_Student_Email_Teacher_Email" FromRole="Teacher_Student_Email" ToRole="Teacher_Email" />
         </EntityType>
         <Association Name="FK_Admin_Feedback_Admin">
           <End Type="Model.Admin" Role="Admin" Multiplicity="0..1">
@@ -1160,6 +1207,40 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Student_Feedback">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="feedback_id" Type="Int32" />
+          <Property Name="student_id" Type="Int32" />
+          <NavigationProperty Name="Feedback" Relationship="Model.FK_Student_Feedback_Feedback" FromRole="Student_Feedback" ToRole="Feedback" />
+          <NavigationProperty Name="Student" Relationship="Model.FK_Student_Feedback_Student" FromRole="Student_Feedback" ToRole="Student" />
+        </EntityType>
+        <Association Name="FK_Student_Feedback_Feedback">
+          <End Type="Model.Feedback" Role="Feedback" Multiplicity="0..1" />
+          <End Type="Model.Student_Feedback" Role="Student_Feedback" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Feedback">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Student_Feedback">
+              <PropertyRef Name="feedback_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Student_Feedback_Student">
+          <End Type="Model.Student" Role="Student" Multiplicity="0..1" />
+          <End Type="Model.Student_Feedback" Role="Student_Feedback" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Student_Feedback">
+              <PropertyRef Name="student_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityType Name="Student_Email">
           <Key>
             <PropertyRef Name="id" />
@@ -1170,6 +1251,7 @@
           <Property Name="text" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
           <Property Name="title" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Name="send_date" Type="DateTime" Precision="3" />
+          <Property Name="email_from" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Student" Relationship="Model.FK_Student_Email_Student" FromRole="Student_Email" ToRole="Student" />
           <NavigationProperty Name="Teacher_Student_Email" Relationship="Model.FK_Teacher_Student_Email_Student_Email" FromRole="Student_Email" ToRole="Teacher_Student_Email" />
         </EntityType>
@@ -1183,7 +1265,20 @@
           <Property Name="text" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
           <Property Name="title" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Name="send_date" Type="DateTime" Precision="3" />
+          <Property Name="email_from" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Teacher_Student_Email" Relationship="Model.FK_Teacher_Student_Email_Teacher_Email" FromRole="Teacher_Email" ToRole="Teacher_Student_Email" />
+        </EntityType>
+        <EntityType Name="Teacher_Student_Email">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="teacher_email_id" Type="Int32" />
+          <Property Name="student_email_id" Type="Int32" />
+          <Property Name="admin_email_id" Type="Int32" />
+          <NavigationProperty Name="Student_Email" Relationship="Model.FK_Teacher_Student_Email_Student_Email" FromRole="Teacher_Student_Email" ToRole="Student_Email" />
+          <NavigationProperty Name="Teacher_Email" Relationship="Model.FK_Teacher_Student_Email_Teacher_Email" FromRole="Teacher_Student_Email" ToRole="Teacher_Email" />
+          <NavigationProperty Name="Admin_Email" Relationship="Model.FK_Teacher_Student_Email_Admin_Email" FromRole="Teacher_Student_Email" ToRole="Admin_Email" />
         </EntityType>
         <Association Name="FK_Student_Email_Student">
           <End Type="Model.Student" Role="Student" Multiplicity="0..1">
@@ -1227,37 +1322,40 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="Student_Feedback">
+        <EntityType Name="Admin_Email">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="feedback_id" Type="Int32" />
-          <Property Name="student_id" Type="Int32" />
-          <NavigationProperty Name="Feedback" Relationship="Model.FK_Student_Feedback_Feedback" FromRole="Student_Feedback" ToRole="Feedback" />
-          <NavigationProperty Name="Student" Relationship="Model.FK_Student_Feedback_Student" FromRole="Student_Feedback" ToRole="Student" />
+          <Property Name="admin_id" Type="Int32" />
+          <Property Name="email_to" Type="Int32" />
+          <Property Name="text" Type="String" MaxLength="3500" FixedLength="false" Unicode="true" />
+          <Property Name="title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="send_date" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Admin" Relationship="Model.FK_Admin_Email_Admin" FromRole="Admin_Email" ToRole="Admin" />
+          <NavigationProperty Name="Teacher_Student_Email" Relationship="Model.FK_Teacher_Student_Email_Admin_Email" FromRole="Admin_Email" ToRole="Teacher_Student_Email" />
         </EntityType>
-        <Association Name="FK_Student_Feedback_Feedback">
-          <End Type="Model.Feedback" Role="Feedback" Multiplicity="0..1" />
-          <End Type="Model.Student_Feedback" Role="Student_Feedback" Multiplicity="*" />
+        <Association Name="FK_Admin_Email_Admin">
+          <End Type="Model.Admin" Role="Admin" Multiplicity="0..1" />
+          <End Type="Model.Admin_Email" Role="Admin_Email" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Feedback">
+            <Principal Role="Admin">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="Student_Feedback">
-              <PropertyRef Name="feedback_id" />
+            <Dependent Role="Admin_Email">
+              <PropertyRef Name="admin_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Student_Feedback_Student">
-          <End Type="Model.Student" Role="Student" Multiplicity="0..1" />
-          <End Type="Model.Student_Feedback" Role="Student_Feedback" Multiplicity="*" />
+        <Association Name="FK_Teacher_Student_Email_Admin_Email">
+          <End Type="Model.Admin_Email" Role="Admin_Email" Multiplicity="0..1" />
+          <End Type="Model.Teacher_Student_Email" Role="Teacher_Student_Email" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Student">
+            <Principal Role="Admin_Email">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="Student_Feedback">
-              <PropertyRef Name="student_id" />
+            <Dependent Role="Teacher_Student_Email">
+              <PropertyRef Name="admin_email_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1463,11 +1561,11 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Teacher_Student_Email">
-            <EntityTypeMapping TypeName="Model.Teacher_Student_Email">
-              <MappingFragment StoreEntitySet="Teacher_Student_Email">
-                <ScalarProperty Name="student_email_id" ColumnName="student_email_id" />
-                <ScalarProperty Name="teacher_email_id" ColumnName="teacher_email_id" />
+          <EntitySetMapping Name="Student_Feedback">
+            <EntityTypeMapping TypeName="Model.Student_Feedback">
+              <MappingFragment StoreEntitySet="Student_Feedback">
+                <ScalarProperty Name="student_id" ColumnName="student_id" />
+                <ScalarProperty Name="feedback_id" ColumnName="feedback_id" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1475,6 +1573,7 @@
           <EntitySetMapping Name="Student_Email">
             <EntityTypeMapping TypeName="Model.Student_Email">
               <MappingFragment StoreEntitySet="Student_Email">
+                <ScalarProperty Name="email_from" ColumnName="email_from" />
                 <ScalarProperty Name="send_date" ColumnName="send_date" />
                 <ScalarProperty Name="title" ColumnName="title" />
                 <ScalarProperty Name="text" ColumnName="text" />
@@ -1487,6 +1586,7 @@
           <EntitySetMapping Name="Teacher_Email">
             <EntityTypeMapping TypeName="Model.Teacher_Email">
               <MappingFragment StoreEntitySet="Teacher_Email">
+                <ScalarProperty Name="email_from" ColumnName="email_from" />
                 <ScalarProperty Name="send_date" ColumnName="send-date" />
                 <ScalarProperty Name="title" ColumnName="title" />
                 <ScalarProperty Name="text" ColumnName="text" />
@@ -1496,11 +1596,24 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Student_Feedback">
-            <EntityTypeMapping TypeName="Model.Student_Feedback">
-              <MappingFragment StoreEntitySet="Student_Feedback">
-                <ScalarProperty Name="student_id" ColumnName="student_id" />
-                <ScalarProperty Name="feedback_id" ColumnName="feedback_id" />
+          <EntitySetMapping Name="Teacher_Student_Email">
+            <EntityTypeMapping TypeName="Model.Teacher_Student_Email">
+              <MappingFragment StoreEntitySet="Teacher_Student_Email">
+                <ScalarProperty Name="admin_email_id" ColumnName="admin_email_id" />
+                <ScalarProperty Name="student_email_id" ColumnName="student_email_id" />
+                <ScalarProperty Name="teacher_email_id" ColumnName="teacher_email_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Admin_Email">
+            <EntityTypeMapping TypeName="Model.Admin_Email">
+              <MappingFragment StoreEntitySet="Admin_Email">
+                <ScalarProperty Name="send_date" ColumnName="send_date" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="text" ColumnName="text" />
+                <ScalarProperty Name="email_to" ColumnName="email_to" />
+                <ScalarProperty Name="admin_id" ColumnName="admin_id" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>

@@ -36,6 +36,7 @@ namespace E_Learning
 					found = true;
 					TeacherDashboardForm frm = new TeacherDashboardForm();
 					frm.Show();
+					this.Hide();
 					break;
 				}
 			}

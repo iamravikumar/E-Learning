@@ -51,6 +51,9 @@ namespace E_Learning
 					teacherRepo.Add(teacher);
 					this.lblSuccessMessage.Text = "Teacher Was Added Successfully.\n User The Email & Password To Login";
 
+					TeacherDashboardForm frm = new TeacherDashboardForm();
+					frm.Show();
+					this.Hide();
 				}
 				else if (index == 2)//create student object
 				{
@@ -70,7 +73,9 @@ namespace E_Learning
 					studetRepo.Add(student);
 					this.lblSuccessMessage.Text = "Student Was Added Successfully.\n User The Email & Password To Login";
 
-
+					StudentDashboardForm frm = new StudentDashboardForm();
+					frm.Show();
+					this.Hide();
 				}
 			}catch(Exception ex)
 			{

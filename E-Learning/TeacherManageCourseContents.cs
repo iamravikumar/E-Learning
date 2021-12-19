@@ -29,6 +29,7 @@ namespace E_Learning
 		private void TeacherManageCourseContents_Load(object sender, EventArgs e)
 		{
 			//Get the id of the current teacher
+			currentTeacherId = Global.userId;
 			courseRepo = new CourseRepository();
 			teacherRepo = new TeacherRepository();
 			contentRepo = new CourseChapterContentRepository();

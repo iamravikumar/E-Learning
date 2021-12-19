@@ -56,6 +56,9 @@
     <Compile Include="Admin.cs">
       <DependentUpon>E-LearningModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Admin_Email.cs">
+      <DependentUpon>E-LearningModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Admin_Feedback.cs">
       <DependentUpon>E-LearningModel.tt</DependentUpon>
     </Compile>

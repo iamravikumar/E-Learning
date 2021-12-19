@@ -23,6 +23,24 @@ namespace E_Learning.Business
 			return email;
 		}
 
+		public List<Teacher_Student_Email> GetTeacherStudentEmailByTeacherEmailId(int id)
+		{
+			List< Teacher_Student_Email> emails = context.Teacher_Student_Email.Where(p => p.teacher_email_id == id).ToList();
+			return emails;
+		}
+
+		public List<Teacher_Student_Email> GetTeacherStudentEmailByStudentEmailId(int id)
+		{
+			List<Teacher_Student_Email> emails = context.Teacher_Student_Email.Where(p => p.student_email_id == id).ToList();
+			return emails;
+		}
+
+		public List<Teacher_Student_Email> GetTeacherStudentEmailByAdminEmailId(int id)
+		{
+			List<Teacher_Student_Email> emails = context.Teacher_Student_Email.Where(p => p.admin_email_id == id).ToList();
+			return emails;
+		}
+
 		public void Add(Teacher_Student_Email email)
 		{
 			try

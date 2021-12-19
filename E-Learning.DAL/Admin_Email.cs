@@ -12,23 +12,22 @@ namespace E_Learning.DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class Student_Email
+    public partial class Admin_Email
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Student_Email()
+        public Admin_Email()
         {
             this.Teacher_Student_Email = new HashSet<Teacher_Student_Email>();
         }
     
         public int id { get; set; }
-        public Nullable<int> student_id { get; set; }
-        public string email_to { get; set; }
+        public Nullable<int> admin_id { get; set; }
+        public Nullable<int> email_to { get; set; }
         public string text { get; set; }
         public string title { get; set; }
         public Nullable<System.DateTime> send_date { get; set; }
-        public string email_from { get; set; }
     
-        public virtual Student Student { get; set; }
+        public virtual Admin Admin { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Teacher_Student_Email> Teacher_Student_Email { get; set; }
     }

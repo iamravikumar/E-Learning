@@ -26,6 +26,7 @@ namespace E_Learning.DAL
         public string text { get; set; }
         public string title { get; set; }
         public Nullable<System.DateTime> send_date { get; set; }
+        public string email_from { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Teacher_Student_Email> Teacher_Student_Email { get; set; }

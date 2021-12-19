@@ -43,10 +43,11 @@ namespace E_Learning.DAL
         public virtual DbSet<Student> Students { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Teacher> Teachers { get; set; }
-        public virtual DbSet<Teacher_Student_Email> Teacher_Student_Email { get; set; }
+        public virtual DbSet<Student_Feedback> Student_Feedback { get; set; }
         public virtual DbSet<Student_Email> Student_Email { get; set; }
         public virtual DbSet<Teacher_Email> Teacher_Email { get; set; }
-        public virtual DbSet<Student_Feedback> Student_Feedback { get; set; }
+        public virtual DbSet<Teacher_Student_Email> Teacher_Student_Email { get; set; }
+        public virtual DbSet<Admin_Email> Admin_Email { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminEmailRepository.cs" />
     <Compile Include="AdminFeedbackRepository.cs" />
     <Compile Include="AdminRepository.cs" />
     <Compile Include="BranchRepository.cs" />
