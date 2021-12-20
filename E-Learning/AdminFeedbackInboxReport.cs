@@ -8,6 +8,9 @@ using System.Text;
 using System.Windows.Forms;
 using E_Learning.DAL;
 using E_Learning.Business;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
+using System.IO;
 
 namespace E_Learning
 {
@@ -45,36 +48,9 @@ namespace E_Learning
 			}
 		}
 
-		private void btnPrintFeedback_Click(object sender, EventArgs e)
-		{
-
-		}
-
 		private void btnShowDetails_Click(object sender, EventArgs e)
 		{
 			ShowFeedbackDetails();
-		}
-
-		private void PrintGridView(PrintPageEventArgs e)
-		{
-			PrintDocument printDocument = new PrintDocument();
-			//create Bitmap and add/draw datagridview to it 
-			Bitmap dataGridViewBitmap = new Bitmap(this.feedbackGRV.Width, this.feedbackGRV.Height);
-			feedbackGRV.DrawToBitmap(dataGridViewBitmap, new System.Drawing
-				.Rectangle(0, 0, this.feedbackGRV.Width, this.feedbackGRV.Height));
-			e.Graphics.DrawImage(dataGridViewBitmap, 0, 0);
-
-			PrintDialog printDialog = new PrintDialog();
-			PrintDialog dataGridViewPrintDialog = new PrintDialog();
-			dataGridViewPrintDialog.Document = printDocument;
-			dataGridViewPrintDialog.UseEXDialog = true;
-			if (DialogResult.OK == dataGridViewPrintDialog.ShowDialog())
-			{
-				//Document Name
-				printDocument.DocumentName = "Printed DataGridView";
-				//Print Datagridview
-				printDocument.Print();
-			}
 		}
 
 	private void ShowFeedbackDetails()
@@ -103,28 +79,67 @@ namespace E_Learning
 
 		private void btnPrint_Click(object sender, EventArgs e)
 		{
-			/*PrintDocument printDocument = new PrintDocument();
-			PrintDialog dataGridViewPrintDialog = new PrintDialog();
-			dataGridViewPrintDialog.Document = printDataGridViewDocument;
-			dataGridViewPrintDialog.UseEXDialog = true;
-
-			DialogResult result = dataGridViewPrintDialog.ShowDialog();
-			if (result == DialogResult.OK)
-			{
-				//Document Name
-				printDocument.DocumentName = "Printed DataGridView";
-				//Print Datagridview
-				printDocument.Print();
-			}*/			
+			ExportGridViewToPdf(feedbackGRV, "Feedbacks List");
 		}
 
-		private void printDataGridViewDocument_PrintPage_1(object sender, PrintPageEventArgs e)
+		private void ExportGridViewToPdf(DataGridView dgv, string fileName)
 		{
-			//create Bitmap and add/draw datagridview to it 
-			Bitmap dataGridViewBitmap = new Bitmap(this.feedbackGRV.Width, this.feedbackGRV.Height);
-			feedbackGRV.DrawToBitmap(dataGridViewBitmap, new System.Drawing
-				.Rectangle(0, 0, this.feedbackGRV.Width, this.feedbackGRV.Height));
-			e.Graphics.DrawImage(dataGridViewBitmap, 0, 0);
+			BaseFont font = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.EMBEDDED);
+			PdfPTable pdf = new PdfPTable(5);
+			pdf.DefaultCell.Padding = 3;
+			pdf.WidthPercentage = 100;
+			pdf.HorizontalAlignment = Element.ALIGN_LEFT;
+			pdf.DefaultCell.BorderWidth = 1;
+			iTextSharp.text.Font text = new iTextSharp.text.Font(font, 10, iTextSharp.text.Font.NORMAL);
+
+			//Add header
+			foreach (DataGridViewColumn item in dgv.Columns)
+			{
+				if (item.Index != 0 && item.Index != 6 && item.Index != 7 && item.Index != 8)
+				{
+					PdfPCell cell = new PdfPCell(new Phrase(item.HeaderText, text));
+					cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240);
+					pdf.AddCell(cell);
+				}
+				else
+					continue;
+			}
+
+			//Add rows
+			foreach (DataGridViewRow item in dgv.Rows)
+			{
+				if (item.Index != 0 && item.Index != 6 && item.Index != 7 && item.Index != 8)
+				{
+					foreach (DataGridViewCell cell in item.Cells)
+					{
+						if (cell.ColumnIndex != 0 && cell.ColumnIndex != 6 && cell.ColumnIndex != 7 && cell.ColumnIndex != 8)
+						{
+							pdf.AddCell(new Phrase(cell.Value.ToString(), text));
+						}
+						else
+							continue;
+					}
+				}
+				else
+					continue;
+			}
+
+			var saveFile = new SaveFileDialog();
+			saveFile.FileName = fileName;
+			saveFile.DefaultExt = ".pdf";
+
+			if (saveFile.ShowDialog() == DialogResult.OK)
+			{
+				using (FileStream stream = new FileStream(saveFile.FileName, FileMode.Create))
+				{
+					Document doc = new Document(PageSize.A4, 10f, 10f, 10f, 0);
+					PdfWriter.GetInstance(doc, stream);
+					doc.Open();
+					doc.Add(pdf);
+					doc.Close();
+					stream.Close();
+				}
+			}
 		}
 	}
 }

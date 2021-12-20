@@ -36,10 +36,8 @@ namespace E_Learning
 			this.label3 = new System.Windows.Forms.Label();
 			this.btnShowDetails = new System.Windows.Forms.Button();
 			this.btnPrint = new System.Windows.Forms.Button();
-			this.btnPrintFeedback = new System.Windows.Forms.Button();
 			this.btnBack = new System.Windows.Forms.Button();
 			this.btnExit = new System.Windows.Forms.Button();
-			this.printDataGridViewDocument = new System.Drawing.Printing.PrintDocument();
 			((System.ComponentModel.ISupportInitialize)(this.feedbackGRV)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -79,7 +77,7 @@ namespace E_Learning
 			this.txtFeedbackDetails.ForeColor = System.Drawing.SystemColors.WindowFrame;
 			this.txtFeedbackDetails.Location = new System.Drawing.Point(30, 414);
 			this.txtFeedbackDetails.Name = "txtFeedbackDetails";
-			this.txtFeedbackDetails.Size = new System.Drawing.Size(544, 289);
+			this.txtFeedbackDetails.Size = new System.Drawing.Size(544, 187);
 			this.txtFeedbackDetails.TabIndex = 3;
 			this.txtFeedbackDetails.Text = "";
 			// 
@@ -115,21 +113,10 @@ namespace E_Learning
 			this.btnPrint.UseVisualStyleBackColor = true;
 			this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
 			// 
-			// btnPrintFeedback
-			// 
-			this.btnPrintFeedback.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.btnPrintFeedback.Location = new System.Drawing.Point(590, 665);
-			this.btnPrintFeedback.Name = "btnPrintFeedback";
-			this.btnPrintFeedback.Size = new System.Drawing.Size(143, 38);
-			this.btnPrintFeedback.TabIndex = 7;
-			this.btnPrintFeedback.Text = "Print Feedback";
-			this.btnPrintFeedback.UseVisualStyleBackColor = true;
-			this.btnPrintFeedback.Click += new System.EventHandler(this.btnPrintFeedback_Click);
-			// 
 			// btnBack
 			// 
 			this.btnBack.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.btnBack.Location = new System.Drawing.Point(30, 752);
+			this.btnBack.Location = new System.Drawing.Point(33, 638);
 			this.btnBack.Name = "btnBack";
 			this.btnBack.Size = new System.Drawing.Size(119, 38);
 			this.btnBack.TabIndex = 8;
@@ -140,7 +127,7 @@ namespace E_Learning
 			// btnExit
 			// 
 			this.btnExit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.btnExit.Location = new System.Drawing.Point(169, 752);
+			this.btnExit.Location = new System.Drawing.Point(172, 638);
 			this.btnExit.Name = "btnExit";
 			this.btnExit.Size = new System.Drawing.Size(114, 38);
 			this.btnExit.TabIndex = 9;
@@ -148,18 +135,13 @@ namespace E_Learning
 			this.btnExit.UseVisualStyleBackColor = true;
 			this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
 			// 
-			// printDataGridViewDocument
-			// 
-			this.printDataGridViewDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDataGridViewDocument_PrintPage_1);
-			// 
 			// AdminFeedbackInboxReport
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(779, 814);
+			this.ClientSize = new System.Drawing.Size(779, 704);
 			this.Controls.Add(this.btnExit);
 			this.Controls.Add(this.btnBack);
-			this.Controls.Add(this.btnPrintFeedback);
 			this.Controls.Add(this.btnPrint);
 			this.Controls.Add(this.btnShowDetails);
 			this.Controls.Add(this.label3);
@@ -186,9 +168,7 @@ namespace E_Learning
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Button btnShowDetails;
 		private System.Windows.Forms.Button btnPrint;
-		private System.Windows.Forms.Button btnPrintFeedback;
 		private System.Windows.Forms.Button btnBack;
 		private System.Windows.Forms.Button btnExit;
-		private System.Drawing.Printing.PrintDocument printDataGridViewDocument;
 	}
 }
