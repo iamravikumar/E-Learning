@@ -44,9 +44,9 @@ namespace E_Learning
 			// toComboBox
 			// 
 			this.toComboBox.FormattingEnabled = true;
-			this.toComboBox.Location = new System.Drawing.Point(123, 69);
+			this.toComboBox.Location = new System.Drawing.Point(106, 80);
 			this.toComboBox.Name = "toComboBox";
-			this.toComboBox.Size = new System.Drawing.Size(353, 23);
+			this.toComboBox.Size = new System.Drawing.Size(397, 23);
 			this.toComboBox.TabIndex = 0;
 			// 
 			// label1
@@ -64,7 +64,7 @@ namespace E_Learning
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.label2.Location = new System.Drawing.Point(59, 69);
+			this.label2.Location = new System.Drawing.Point(42, 80);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(33, 25);
 			this.label2.TabIndex = 2;
@@ -72,25 +72,25 @@ namespace E_Learning
 			// 
 			// txtTitle
 			// 
-			this.txtTitle.Location = new System.Drawing.Point(123, 128);
+			this.txtTitle.Location = new System.Drawing.Point(106, 139);
 			this.txtTitle.Name = "txtTitle";
-			this.txtTitle.Size = new System.Drawing.Size(353, 23);
+			this.txtTitle.Size = new System.Drawing.Size(397, 23);
 			this.txtTitle.TabIndex = 6;
 			// 
 			// txtContent
 			// 
-			this.txtContent.Location = new System.Drawing.Point(123, 177);
+			this.txtContent.Location = new System.Drawing.Point(106, 188);
 			this.txtContent.Name = "txtContent";
-			this.txtContent.Size = new System.Drawing.Size(353, 136);
+			this.txtContent.Size = new System.Drawing.Size(397, 182);
 			this.txtContent.TabIndex = 7;
 			this.txtContent.Text = "";
 			// 
 			// btnSend
 			// 
 			this.btnSend.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.btnSend.Location = new System.Drawing.Point(377, 328);
+			this.btnSend.Location = new System.Drawing.Point(404, 376);
 			this.btnSend.Name = "btnSend";
-			this.btnSend.Size = new System.Drawing.Size(99, 30);
+			this.btnSend.Size = new System.Drawing.Size(99, 35);
 			this.btnSend.TabIndex = 8;
 			this.btnSend.Text = "Send";
 			this.btnSend.UseVisualStyleBackColor = true;
@@ -100,7 +100,7 @@ namespace E_Learning
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.label3.Location = new System.Drawing.Point(59, 128);
+			this.label3.Location = new System.Drawing.Point(42, 139);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(50, 25);
 			this.label3.TabIndex = 11;
@@ -110,7 +110,7 @@ namespace E_Learning
 			// 
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.label4.Location = new System.Drawing.Point(59, 177);
+			this.label4.Location = new System.Drawing.Point(42, 188);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(49, 25);
 			this.label4.TabIndex = 12;
@@ -119,7 +119,7 @@ namespace E_Learning
 			// btnBack
 			// 
 			this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.btnBack.Location = new System.Drawing.Point(59, 375);
+			this.btnBack.Location = new System.Drawing.Point(37, 427);
 			this.btnBack.Name = "btnBack";
 			this.btnBack.Size = new System.Drawing.Size(99, 30);
 			this.btnBack.TabIndex = 13;
@@ -130,7 +130,7 @@ namespace E_Learning
 			// btnExit
 			// 
 			this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.btnExit.Location = new System.Drawing.Point(189, 375);
+			this.btnExit.Location = new System.Drawing.Point(167, 427);
 			this.btnExit.Name = "btnExit";
 			this.btnExit.Size = new System.Drawing.Size(99, 30);
 			this.btnExit.TabIndex = 14;
@@ -142,7 +142,7 @@ namespace E_Learning
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(538, 433);
+			this.ClientSize = new System.Drawing.Size(534, 493);
 			this.Controls.Add(this.btnExit);
 			this.Controls.Add(this.btnBack);
 			this.Controls.Add(this.label4);

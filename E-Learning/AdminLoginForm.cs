@@ -42,6 +42,7 @@ namespace E_Learning
 					found = true;
 					AdminDashboardForm frm = new AdminDashboardForm();
 					frm.Show();
+					this.Hide();
 					break;
 				}
 			}

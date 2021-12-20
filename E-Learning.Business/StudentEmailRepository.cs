@@ -23,6 +23,12 @@ namespace E_Learning.Business
 			return email;
 		}
 
+		public List<Student_Email> GetStudentEmailByStudentId(int id)
+		{
+			List<Student_Email> emails = context.Student_Email.Where(p => p.student_id == id).ToList();
+			return emails;
+		}
+
 		public void Add(Student_Email email)
 		{
 			try

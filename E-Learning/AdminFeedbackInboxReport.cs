@@ -114,7 +114,8 @@ namespace E_Learning
 					{
 						if (cell.ColumnIndex != 0 && cell.ColumnIndex != 6 && cell.ColumnIndex != 7 && cell.ColumnIndex != 8)
 						{
-							pdf.AddCell(new Phrase(cell.Value.ToString(), text));
+							if (cell.Value != null)
+								pdf.AddCell(new Phrase(cell.Value.ToString(), text));
 						}
 						else
 							continue;

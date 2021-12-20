@@ -96,24 +96,43 @@ namespace E_Learning
 
 		private void btnAdd_Click(object sender, EventArgs e)
 		{
-			teacherRepo = new TeacherRepository();
-			teacher = new Teacher();
-			teacher.first_name = textBoxFName.Text;
-			teacher.last_name = textBoxLName.Text;
-			teacher.email = textBoxEmail.Text;
-			teacher.password = textBoxPwd.Text;
-			teacher.qualification = textBoxQualification.Text;
-			teacher.brief = textBoxBrief.Text;
-			int deptId = comboBoxDepId.SelectedIndex;
-			deptId++;
-			teacher.department_id = deptId;
-			int rollId = comboBoxRollId.SelectedIndex;
-			rollId++;
-			teacher.roll_id = rollId;
-			teacherRepo.Add(teacher);
-			RefreshTable();
-			lblMessage.Visible = true;
-			lblMessage.Text = "Staff was added successfully";
+			try
+			{
+				int rollId = comboBoxRollId.SelectedIndex;
+				rollId++;
+				if (rollId == 2)
+				{
+					teacherRepo = new TeacherRepository();
+					teacher = new Teacher();
+					teacher.first_name = textBoxFName.Text;
+					teacher.last_name = textBoxLName.Text;
+					teacher.email = textBoxEmail.Text;
+					teacher.password = textBoxPwd.Text;
+					teacher.qualification = textBoxQualification.Text;
+					teacher.brief = textBoxBrief.Text;
+					int deptId = comboBoxDepId.SelectedIndex;
+					deptId++;
+					teacher.department_id = deptId;
+					teacher.roll_id = rollId;
+					teacherRepo.Add(teacher);
+				}
+				else if (rollId == 1)
+				{
+					AdminRepository adminRepo = new AdminRepository();
+					Admin admin = new Admin();
+					admin.first_name = textBoxFName.Text;
+					admin.last_name = textBoxLName.Text;
+					admin.email = textBoxEmail.Text;
+					admin.password = textBoxPwd.Text;
+					adminRepo.Add(admin);
+				}
+				RefreshTable();
+				lblMessage.Visible = true;
+				lblMessage.Text = "Staff was added successfully";
+			}catch(Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
 		}
 
 		private void ShowAddSection()
