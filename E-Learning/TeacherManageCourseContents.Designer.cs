@@ -333,7 +333,7 @@ namespace E_Learning
 			// btnBack
 			// 
 			this.btnBack.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.btnBack.Location = new System.Drawing.Point(20, 712);
+			this.btnBack.Location = new System.Drawing.Point(17, 690);
 			this.btnBack.Name = "btnBack";
 			this.btnBack.Size = new System.Drawing.Size(139, 36);
 			this.btnBack.TabIndex = 30;
@@ -344,7 +344,7 @@ namespace E_Learning
 			// btnExit
 			// 
 			this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.btnExit.Location = new System.Drawing.Point(176, 712);
+			this.btnExit.Location = new System.Drawing.Point(173, 690);
 			this.btnExit.Name = "btnExit";
 			this.btnExit.Size = new System.Drawing.Size(93, 36);
 			this.btnExit.TabIndex = 31;
@@ -367,7 +367,7 @@ namespace E_Learning
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(850, 773);
+			this.ClientSize = new System.Drawing.Size(850, 739);
 			this.Controls.Add(this.btnDeleteChapter);
 			this.Controls.Add(this.btnExit);
 			this.Controls.Add(this.btnBack);

@@ -24,7 +24,8 @@ namespace E_Learning
 			string lName = this.txtBoxLName.Text;
 			string email = this.txtBoxEmail.Text;
 			string password = this.txtBoxPassword.Text;
-
+			Global.username = fName + " " + lName;
+			
 			//store user input into proper objects and create new user
 			int index = this.comboBoxRollList.SelectedIndex;
 
@@ -34,7 +35,8 @@ namespace E_Learning
 				{
 					string qualification = this.txtBoxQualification.Text;
 					string brief = this.txtBoxBrief.Text;
-					int deptID = this.comboBoxDeptList.SelectedIndex;
+					int deptIndex = comboBoxDeptList.SelectedItem.ToString().IndexOf(",");
+					int deptID = Convert.ToInt32(this.comboBoxDeptList.SelectedItem.ToString().Substring(0,deptIndex));
 					//create a teacher object
 					Teacher teacher = new Teacher();
 					TeacherRepository teacherRepo = new TeacherRepository();
@@ -46,9 +48,10 @@ namespace E_Learning
 					teacher.qualification = qualification;
 					teacher.brief = brief;
 					teacher.roll_id = 2;
-					teacher.department_id = Convert.ToInt32(deptID++);
+					teacher.department_id = deptID;
 					//Add the teacher to the databases
 					teacherRepo.Add(teacher);
+					Global.userId = teacher.id;
 					this.lblSuccessMessage.Text = "Teacher Was Added Successfully.\n User The Email & Password To Login";
 
 					TeacherDashboardForm frm = new TeacherDashboardForm();
@@ -57,7 +60,8 @@ namespace E_Learning
 				}
 				else if (index == 2)//create student object
 				{
-					int branchID = this.comboBoxBranchList.SelectedIndex;
+					int bracnchindex = comboBoxBranchList.SelectedItem.ToString().IndexOf(",");
+					int branchID = Convert.ToInt32(this.comboBoxBranchList.SelectedItem.ToString().Substring(0, bracnchindex));
 					//create student object
 					StudentRepository studetRepo = new StudentRepository();
 					Student student = new Student();
@@ -66,11 +70,12 @@ namespace E_Learning
 					student.last_name = lName;
 					student.email = email;
 					student.password = password;
-					student.branch_id = Convert.ToInt32(branchID++);
+					student.branch_id = branchID;
 					student.roll_id = 3;
 					student.num_of_courses_completed = 0;
 					//add the student to the database
 					studetRepo.Add(student);
+					Global.userId = student.id;
 					this.lblSuccessMessage.Text = "Student Was Added Successfully.\n User The Email & Password To Login";
 
 					StudentDashboardForm frm = new StudentDashboardForm();
@@ -105,7 +110,6 @@ namespace E_Learning
 				//Show student details field
 				this.lblBranch.Visible = true;
 				this.comboBoxBranchList.Visible = true;
-
 
 				//Hide teacher details fields
 				this.lblBrief.Visible = false;
